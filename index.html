@@ -1,0 +1,2021 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ВНЖ и гражданство Бразилии под ключ — для русскоязычных семей. Оформление за 1–2 месяца. Команда Ильи и Екатерины Магнус работает с 2022 года. 200+ кейсов.">
+<title>Свои в Бразилии — ВНЖ и гражданство под ключ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+<style>
+  /* ── TOKEN SYSTEM ── */
+  :root {
+    --ink:        #0F1A1C;   /* deep teal-black */
+    --paper:      #F7F4EE;   /* warm ivory */
+    --mid:        #E8E3D8;   /* divider sand */
+    --accent:     #1A7A5E;   /* Brazilian jungle green */
+    --accent-lt:  #E8F4F0;   /* tint */
+    --gold:       #C9922A;   /* flag gold */
+    --muted:      #6B7A7D;   /* secondary text */
+    --white:      #FFFFFF;
+    --radius:     4px;
+    --serif:      'Playfair Display', Georgia, serif;
+    --sans:       'Inter', system-ui, sans-serif;
+    --display:    'Montserrat', sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; font-size: 16px; overflow-y: scroll; }
+
+  body {
+    font-family: var(--sans);
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── UTILITY ── */
+  .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+  .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: var(--ink);
+    border-bottom: 2px solid var(--accent);
+  }
+  .nav-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 24px;
+    max-width: 1080px; margin: 0 auto;
+  }
+  .nav-right {
+    display: flex; align-items: center; gap: 16px;
+  }
+  .nav-logo {
+    font-family: var(--serif);
+    font-size: 1.15rem;
+    color: var(--white);
+    text-decoration: none;
+    letter-spacing: 0.02em;
+  }
+  .nav-logo span { color: var(--gold); }
+  .nav-links {
+    display: flex; gap: 28px; list-style: none;
+  }
+  .nav-links a {
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--white); }
+  .nav-cta {
+    background: var(--accent);
+    color: var(--white) !important;
+    padding: 8px 18px;
+    border-radius: var(--radius);
+    font-weight: 600 !important;
+  }
+  .nav-cta:hover { background: #15664E !important; color: var(--white) !important; }
+
+  .lang-switcher {
+    background: transparent;
+    border: 1.5px solid rgba(255,255,255,0.35);
+    color: rgba(255,255,255,0.75);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding: 5px 10px;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+    font-family: var(--sans);
+  }
+  .lang-switcher:hover { border-color: var(--white); color: var(--white); }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--ink);
+    color: var(--white);
+    padding: 96px 24px 80px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 70% 50%, rgba(26,122,94,0.18) 0%, transparent 65%);
+    pointer-events: none;
+  }
+  .hero-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+    display: block;
+  }
+  .hero h1 {
+    font-family: var(--serif);
+    font-size: clamp(2.4rem, 5vw, 3.8rem);
+    line-height: 1.15;
+    font-weight: 700;
+    max-width: 720px;
+    margin-bottom: 24px;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--gold);
+  }
+  .hero-sub {
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.7);
+    max-width: 560px;
+    margin-bottom: 40px;
+    line-height: 1.7;
+  }
+  .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 14px 28px;
+    border-radius: var(--radius);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    transition: transform 0.15s, box-shadow 0.15s;
+    cursor: pointer;
+    border: none;
+  }
+  .btn:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(0,0,0,0.2); }
+  .btn-primary { background: var(--accent); color: var(--white); }
+  .btn-primary:hover { background: #15664E; }
+  .btn-secondary { background: transparent; color: var(--white); border: 1.5px solid rgba(255,255,255,0.35); }
+  .btn-secondary:hover { border-color: var(--white); }
+  .btn-accent { background: var(--gold); color: var(--ink); }
+  .btn-accent:hover { background: #b5821f; }
+
+  .hero-stats {
+    display: flex; gap: 40px; flex-wrap: wrap;
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(255,255,255,0.12);
+  }
+  .hero-stat-num {
+    font-family: var(--display);
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--white);
+    display: block;
+  }
+  .hero-stat-label {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.55);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  /* ── PASSPORT VALUE BAR ── */
+  .passport-bar {
+    background: var(--accent);
+    color: var(--white);
+    text-align: center;
+    padding: 16px 24px;
+    font-size: 0.88rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
+  .passport-bar strong { color: var(--gold); }
+
+  /* ── SECTION BASE ── */
+  section { padding: 80px 0; }
+  .section-label {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 12px;
+    display: block;
+  }
+  .section-title {
+    font-family: var(--serif);
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+  .section-sub {
+    color: var(--muted);
+    max-width: 560px;
+    margin-bottom: 48px;
+    font-size: 1rem;
+  }
+  .divider {
+    width: 48px; height: 3px;
+    background: var(--gold);
+    margin: 16px 0 40px;
+    border-radius: 2px;
+  }
+
+  /* ── WHY BRAZIL ── */
+  .why-brazil { background: var(--white); }
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+    margin-top: 16px;
+  }
+  .why-card {
+    background: var(--paper);
+    border: 1px solid var(--mid);
+    border-radius: 6px;
+    padding: 28px 24px;
+    border-top: 3px solid var(--accent);
+  }
+  .why-card-icon { font-size: 1.6rem; margin-bottom: 12px; display: block; }
+  .why-card h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 8px; }
+  .why-card p { font-size: 0.88rem; color: var(--muted); line-height: 1.6; }
+
+  /* ── VNJ OPTIONS ── */
+  .vnj-section { background: var(--paper); }
+  .vnj-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  .vnj-card {
+    background: var(--white);
+    border: 1px solid var(--mid);
+    border-radius: 6px;
+    padding: 28px;
+    transition: box-shadow 0.2s, transform 0.2s;
+    position: relative;
+  }
+  .vnj-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.09); transform: translateY(-2px); }
+  .vnj-card-tag {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 2px;
+    margin-bottom: 14px;
+  }
+  .tag-temp { background: var(--accent-lt); color: var(--accent); }
+  .tag-perm { background: #FBF4E6; color: var(--gold); }
+  .vnj-card h3 { font-family: var(--serif); font-size: 1.2rem; font-weight: 700; margin-bottom: 10px; }
+  .vnj-card p { font-size: 0.88rem; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
+  .vnj-card-path {
+    font-size: 0.78rem;
+    color: var(--accent);
+    font-weight: 600;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .vnj-card-path::before { content: '→'; }
+
+  /* ── PRICES ── */
+  .prices-section { background: var(--ink); color: var(--white); }
+  .prices-section .section-title { color: var(--white); }
+  .prices-section .section-sub { color: rgba(255,255,255,0.6); }
+  .prices-section .section-label { color: var(--gold); }
+  .prices-section .divider { background: var(--gold); }
+
+  .prices-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+  .price-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 6px;
+    padding: 24px;
+    display: flex; flex-direction: column;
+  }
+  .price-card-name { font-size: 0.95rem; font-weight: 600; margin-bottom: 6px; color: var(--white); }
+  .price-card-desc { font-size: 0.82rem; color: rgba(255,255,255,0.5); flex: 1; line-height: 1.55; margin-bottom: 16px; }
+  .price-card-amount {
+    font-family: var(--display);
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--gold);
+  }
+  .price-card-amount span { font-size: 0.9rem; font-weight: 400; color: rgba(255,255,255,0.4); }
+
+  .extras-title {
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em;
+    text-transform: uppercase; color: rgba(255,255,255,0.4);
+    margin-bottom: 16px;
+  }
+  .extras-list {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 8px;
+    list-style: none;
+  }
+  .extras-list li {
+    font-size: 0.84rem;
+    color: rgba(255,255,255,0.65);
+    display: flex; justify-content: space-between; align-items: baseline;
+    padding: 8px 12px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 3px;
+    border-left: 2px solid var(--accent);
+  }
+  .extras-list li .price { font-weight: 700; color: var(--gold); white-space: nowrap; margin-left: 12px; }
+
+  /* ── HOW IT WORKS ── */
+  .process-section { background: var(--white); }
+  .process-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0; }
+  .process-step {
+    padding: 32px 28px;
+    border-right: 1px solid var(--mid);
+    position: relative;
+  }
+  .process-step:last-child { border-right: none; }
+  .step-num {
+    font-family: var(--display);
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: var(--mid);
+    line-height: 1;
+    margin-bottom: 16px;
+  }
+  .process-step h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 8px; }
+  .process-step p { font-size: 0.84rem; color: var(--muted); line-height: 1.6; }
+
+  /* ── REVIEWS ── */
+  .reviews-section { background: var(--paper); }
+  .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+  .review-card {
+    background: var(--white);
+    border: 1px solid var(--mid);
+    border-radius: 6px;
+    padding: 28px;
+  }
+  .review-stars { color: var(--gold); font-size: 0.9rem; margin-bottom: 12px; letter-spacing: 2px; }
+  .review-text { font-size: 0.9rem; line-height: 1.65; color: var(--ink); margin-bottom: 16px; font-style: italic; }
+  .review-author { font-size: 0.8rem; font-weight: 700; color: var(--muted); }
+
+  /* ── TEAM ── */
+  .team-section { background: var(--white); }
+  .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+  .team-card {
+    padding: 0;
+    background: var(--paper);
+    border: 1px solid var(--mid);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .team-card-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 28px;
+    gap: 16px;
+  }
+  .team-card-text { flex: 1; min-width: 0; }
+  .team-role {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+    display: block;
+  }
+  .team-name { font-family: var(--serif); font-size: 1.2rem; font-weight: 700; margin-bottom: 10px; }
+  .team-bio { font-size: 0.87rem; color: var(--muted); line-height: 1.65; }
+  .team-photo {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    background-color: var(--mid);
+    background-size: cover;
+    background-position: center;
+    border: 2px solid var(--mid);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .team-photo-hint {
+    font-size: 0.6rem;
+    color: var(--muted);
+    text-align: center;
+    line-height: 1.3;
+    padding: 4px;
+    /* скрывается, когда фото загружено */
+  }
+  /* Если фото задано — скрываем подсказку */
+  .team-photo[style*="url('photo-"]:not([style*="url('')"]) .team-photo-hint {
+    display: none;
+  }
+
+  /* ── FAQ ── */
+  .faq-section { background: var(--paper); }
+  .faq-list { max-width: 720px; }
+  details {
+    border-bottom: 1px solid var(--mid);
+  }
+  details:first-of-type { border-top: 1px solid var(--mid); }
+  summary {
+    padding: 18px 0;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    display: flex; justify-content: space-between; align-items: center;
+    list-style: none;
+    user-select: none;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: '+'; color: var(--accent); font-size: 1.3rem; font-weight: 300; flex-shrink: 0; margin-left: 16px; }
+  details[open] summary::after { content: '−'; }
+  .faq-answer { padding-bottom: 18px; font-size: 0.9rem; color: var(--muted); line-height: 1.7; }
+
+  /* ── CTA BLOCK ── */
+  .cta-section {
+    background: var(--accent);
+    color: var(--white);
+    text-align: center;
+    padding: 80px 24px;
+  }
+  .cta-section .section-title { color: var(--white); max-width: 620px; margin: 0 auto 12px; }
+  .cta-sub {
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 36px;
+    font-size: 1rem;
+  }
+  .cta-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+  .btn-white { background: var(--white); color: var(--accent); }
+  .btn-white:hover { background: var(--paper); }
+  .btn-outline-white { background: transparent; color: var(--white); border: 1.5px solid rgba(255,255,255,0.5); }
+  .btn-outline-white:hover { border-color: var(--white); }
+
+  /* ── CONTACTS ── */
+  .contacts-section { background: var(--ink); color: var(--white); }
+  .contacts-section .section-title { color: var(--white); }
+  .contacts-section .divider { background: var(--gold); }
+  .contacts-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+  .contact-item { margin-bottom: 20px; }
+  .contact-label { font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 4px; }
+  .contact-value { font-size: 1rem; color: var(--white); text-decoration: none; }
+  .contact-value:hover { color: var(--gold); }
+  .contact-buttons { display: flex; flex-direction: column; gap: 12px; }
+  .btn-tg { background: #229ED9; color: var(--white); justify-content: center; }
+  .btn-wa { background: #25D366; color: var(--white); justify-content: center; }
+
+  /* ── BIRTHS BANNER ── */
+  .births-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin: 0;
+    padding: 32px 0;
+    border-bottom: 1px solid var(--mid);
+    flex-wrap: wrap;
+  }
+  .births-banner-text {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .births-banner-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  .births-banner-text strong {
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    color: var(--ink);
+  }
+  .births-banner-text p {
+    font-size: 0.87rem;
+    color: var(--muted);
+    max-width: 480px;
+    line-height: 1.55;
+  }
+  .btn-births {
+    background: var(--accent);
+    color: var(--white);
+    font-weight: 700;
+    white-space: nowrap;
+    flex-shrink: 0;
+    padding: 14px 28px;
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+  }
+  .btn-births:hover { background: #15664E; }
+
+  /* ── MODAL BUTTON ON PRICE CARD ── */
+  .modal-btn {
+    margin-top: 14px;
+    background: none;
+    border: 1px solid rgba(255,255,255,0.2);
+    color: rgba(255,255,255,0.6);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    padding: 7px 14px;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+    width: 100%;
+    text-align: left;
+  }
+  .modal-btn:hover { border-color: var(--gold); color: var(--gold); }
+
+  /* ── MODAL OVERLAY ── */
+  .modal-overlay {
+    display: none;
+    position: fixed; inset: 0; z-index: 1000;
+    background: rgba(10,20,22,0.8);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .modal-overlay.modal-open { display: flex; }
+  .modal {
+    background: var(--white);
+    border-radius: 8px;
+    padding: 36px;
+    max-width: 720px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+  }
+  .modal-close {
+    position: absolute; top: 16px; right: 16px;
+    background: none; border: none;
+    font-size: 1.1rem; color: var(--muted);
+    cursor: pointer; line-height: 1;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: background 0.15s;
+  }
+  .modal-close:hover { background: var(--mid); color: var(--ink); }
+  .modal-tag {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 2px;
+    margin-bottom: 12px;
+  }
+  .modal-title {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: var(--ink);
+  }
+  .modal-price {
+    font-size: 0.88rem;
+    color: var(--muted);
+    margin-bottom: 24px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--mid);
+  }
+  .modal-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-bottom: 28px;
+  }
+  .modal-section-label {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 12px;
+  }
+  .modal-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .modal-list li {
+    font-size: 0.88rem;
+    color: var(--ink);
+    line-height: 1.5;
+    padding-left: 18px;
+    position: relative;
+  }
+  .modal-list li::before {
+    content: '✓';
+    position: absolute; left: 0;
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 0.8rem;
+  }
+  .modal-list-note::before {
+    content: 'ℹ' !important;
+    color: var(--gold) !important;
+  }
+  .modal-list-note {
+    color: var(--muted) !important;
+    font-style: italic;
+  }
+  .modal-cta { width: 100%; justify-content: center; }
+  @media (max-width: 580px) {
+    .modal-cols { grid-template-columns: 1fr; gap: 20px; }
+    .modal { padding: 24px 20px; }
+  }
+
+  /* ── OFERTA LINK ── */
+  .oferta-link {
+    color: var(--gold);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: 600;
+    transition: color 0.2s;
+  }
+  .oferta-link:hover { color: #e8aa42; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #080F10;
+    color: rgba(255,255,255,0.35);
+    text-align: center;
+    padding: 24px;
+    font-size: 0.78rem;
+    line-height: 1.7;
+  }
+  footer a { color: rgba(255,255,255,0.5); text-decoration: none; }
+  footer a:hover { color: var(--white); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 680px) {
+    .nav-links { display: none; }
+    .nav-right { gap: 0; }
+    .contacts-inner { grid-template-columns: 1fr; gap: 40px; }
+    .process-steps { grid-template-columns: 1fr; }
+    .process-step { border-right: none; border-bottom: 1px solid var(--mid); }
+    .hero { padding: 64px 24px 60px; }
+    .hero-stats { gap: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" class="nav-logo">Свои <span>в Бразилии</span></a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="#vnj" data-i18n="nav.basis">Основания</a></li>
+        <li><a href="#prices" data-i18n="nav.prices">Цены</a></li>
+        <li><a href="#process" data-i18n="nav.process">Как работаем</a></li>
+        <li><a href="#reviews" data-i18n="nav.reviews">Отзывы</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="https://t.me/rio_das_magnus" class="nav-cta" target="_blank" data-i18n="nav.cta">Написать нам</a></li>
+      </ul>
+      <button class="lang-switcher" id="langBtn" onclick="toggleLang()">EN</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <span class="hero-label" data-i18n="hero.label">Работаем с 2022 года</span>
+    <h1 data-i18n="hero.h1">ВНЖ и гражданство Бразилии — <em>без лишних нервов</em></h1>
+    <p class="hero-sub" data-i18n="hero.sub">
+      Помогаем русскоязычным семьям легализоваться в Бразилии. Весь процесс — онлайн, в приватном чате, оригиналы документов остаются у вас. Результат — за 1–2 месяца.
+    </p>
+    <div class="hero-actions">
+      <a href="https://t.me/rio_das_magnus" class="btn btn-primary" target="_blank" data-i18n="hero.btn1">Написать в Telegram</a>
+      <a href="#prices" class="btn btn-secondary" data-i18n="hero.btn2">Смотреть цены</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <span class="hero-stat-num">200+</span>
+        <span class="hero-stat-label" data-i18n="stat1">оформлений ВНЖ и гражданства</span>
+      </div>
+      <div>
+        <span class="hero-stat-num">1–2 мес.</span>
+        <span class="hero-stat-label" data-i18n="stat2">средний срок получения ВНЖ</span>
+      </div>
+      <div>
+        <span class="hero-stat-num" data-i18n="stat3n">с 2022</span>
+        <span class="hero-stat-label" data-i18n="stat3">работаем в Бразилии</span>
+      </div>
+      <div>
+        <span class="hero-stat-num" data-i18n="stat4n">любой штат</span>
+        <span class="hero-stat-label" data-i18n="stat4">оформляем по всей стране</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PASSPORT VALUE BAR -->
+<div class="passport-bar">
+  🇧🇷 Бразильский паспорт — <strong>Европа, Великобритания, Япония без визы</strong> · Виза США на 10 лет · С ВНЖ Бразилии — удобная подача на Шенген и визу США прямо отсюда
+</div>
+
+<!-- WHY BRAZIL -->
+<section class="why-brazil" id="why">
+  <div class="container">
+    <span class="section-label">Зачем это нужно</span>
+    <h2 class="section-title">Что даёт ВНЖ Бразилии</h2>
+    <div class="divider"></div>
+    <div class="why-grid">
+      <div class="why-card">
+        <span class="why-card-icon">🏦</span>
+        <h3>Банки и финансы</h3>
+        <p>Счета в международных банках, платёжные системы, криптобиржи — всё открывается с бразильским ВНЖ.</p>
+      </div>
+      <div class="why-card">
+        <span class="why-card-icon">🛂</span>
+        <h3>Шенген и США</h3>
+        <p>С ВНЖ Бразилии можно подавать на шенгенскую визу и визу США прямо отсюда, без отказов.</p>
+      </div>
+      <div class="why-card">
+        <span class="why-card-icon">🚗</span>
+        <h3>Водительские права</h3>
+        <p>При наличии ВНЖ — возможность получения бразильских прав без пересдачи экзамена на основании ваших действующих прав.</p>
+      </div>
+      <div class="why-card">
+        <span class="why-card-icon">📱</span>
+        <h3>YouTube, TikTok, Fanvu и другие</h3>
+        <p>Монетизация аккаунтов на международных платформах — без ограничений.</p>
+      </div>
+      <div class="why-card">
+        <span class="why-card-icon">✈️</span>
+        <h3>Свобода передвижения</h3>
+        <p>Выезжайте и возвращайтесь без ограничений — ВНЖ не привязывает вас к стране.</p>
+      </div>
+      <div class="why-card">
+        <span class="why-card-icon">🏡</span>
+        <h3>Гражданство семье</h3>
+        <p>Постоянный ВНЖ → через 1 год подача на паспорт. Дети до 10 лет получают паспорт за 6 месяцев.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VNJ OPTIONS -->
+<section class="vnj-section" id="vnj">
+  <div class="container">
+    <span class="section-label">Основания для ВНЖ</span>
+    <h2 class="section-title">Выберите подходящий путь</h2>
+    <div class="divider"></div>
+    <div class="vnj-grid">
+
+      <div class="vnj-card">
+        <span class="vnj-card-tag tag-temp">Временный ВНЖ · 1 год</span>
+        <h3>Цифровой кочевник (Nomad Visa)</h3>
+        <p>Для фрилансеров, удалённых сотрудников и всех, у кого есть подтверждённый доход. Подходит для всей семьи. Продлевается ежегодно.</p>
+      </div>
+
+      <div class="vnj-card">
+        <span class="vnj-card-tag tag-temp">Временный ВНЖ · 1 год</span>
+        <h3>Учёба (взрослые и дети)</h3>
+        <p>На основании учёбы в школе, детском саду, языковом курсе или университете — для всей семьи. Помогаем с поступлением и документами.</p>
+        <span class="vnj-card-path">продлевается на весь срок учёбы</span>
+      </div>
+
+      <div class="vnj-card">
+        <span class="vnj-card-tag tag-perm">Постоянный ВНЖ</span>
+        <h3>Рождение ребёнка</h3>
+        <p>Ребёнок, рождённый в Бразилии, автоматически становится гражданином. Родители получают постоянный ВНЖ и через год могут подать на паспорт. Роды в частном или государственном роддоме — бесплатно по SUS.</p>
+        <span class="vnj-card-path">гражданство родителям через 1 год</span>
+      </div>
+
+      <div class="vnj-card">
+        <span class="vnj-card-tag tag-perm">Постоянный ВНЖ</span>
+        <h3>Брак с гражданином Бразилии</h3>
+        <p>Официальный брак или «устойчивый союз» (união estável) дают право на постоянный ВНЖ сразу. Через год — документы на гражданство.</p>
+        <span class="vnj-card-path">гражданство через 1 год</span>
+      </div>
+
+      <div class="vnj-card">
+        <span class="vnj-card-tag tag-temp">Временный ВНЖ · 1 год</span>
+        <h3>Политическое убежище</h3>
+        <p>Бразилия лояльна к беженцам — доказательств и адвокатов при подаче не требуется. ВНЖ выдаётся на 1 год с правом продления. Можно выезжать и возвращаться с уведомлением организации.</p>
+        <span class="vnj-card-path">гражданство через 5–10 лет</span>
+      </div>
+
+      <div class="vnj-card">
+        <span class="vnj-card-tag tag-temp">Временный ВНЖ · 4 года → Постоянный ВНЖ</span>
+        <h3>Инвестиции</h3>
+        <p>Покупка недвижимости от 1 млн реалов или инвестиции в бизнес от 500 тыс. реалов. Распространяется на всех членов семьи. Даёт право работать и вести бизнес в Бразилии.</p>
+        <span class="vnj-card-path">гражданство через 8 лет</span>
+      </div>
+
+      <div class="vnj-card">
+        <span class="vnj-card-tag tag-perm">Постоянный ВНЖ</span>
+        <h3>Ребёнок-аргентинец</h3>
+        <p>Оформление ВНЖ на основании соглашения MERCOSUL, если у вашего ребёнка аргентинское гражданство. Дети до 10 лет получают гражданство Бразилии за 6 месяцев, а родители имеют право подать на паспорт через 4 года.</p>
+        <span class="vnj-card-path">гражданство детям за 6 месяцев · родителям через 4 года</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PRICES -->
+<section class="prices-section" id="prices">
+  <div class="container">
+    <span class="section-label">Прозрачные цены</span>
+    <h2 class="section-title">Пакеты оформления</h2>
+    <div class="divider"></div>
+    <p class="section-sub">
+      Услуги оказываются на основании
+      <a href="#" onclick="return false;" id="oferta-link-prices" target="_blank" class="oferta-link">публичной оферты</a>.
+    </p>
+
+    <div class="prices-grid">
+
+      <div class="price-card">
+        <div class="price-card-name">По рождению ребёнка</div>
+        <div class="price-card-desc">Для семьи из 3 человек. Постоянный ВНЖ для всей семьи + подача на гражданство для детей до 10 лет. Стоимость переводов и пошлин включена.</div>
+        <div class="price-card-amount">$1 900 <span>за пакет</span></div>
+        <button class="modal-btn" onclick="openModal('modal-birth')">Что входит в пакет →</button>
+      </div>
+
+      <div class="price-card">
+        <div class="price-card-name">Студенческий</div>
+        <div class="price-card-desc">Для семьи из 3 человек. Временный ВНЖ на 1 год с правом продления на основании учёбы. Стоимость переводов и пошлин включена.</div>
+        <div class="price-card-amount">$1 900 <span>за пакет</span></div>
+        <button class="modal-btn" onclick="openModal('modal-study')">Что входит в пакет →</button>
+      </div>
+
+      <div class="price-card">
+        <div class="price-card-name">Цифровой кочевник</div>
+        <div class="price-card-desc">Для 1 человека. Временный ВНЖ на 1 год. Для людей с доходом онлайн.</div>
+        <div class="price-card-amount">$1 200 <span>за пакет</span></div>
+        <button class="modal-btn" onclick="openModal('modal-nomad')">Что входит в пакет →</button>
+      </div>
+
+      <div class="price-card">
+        <div class="price-card-name">По браку / союзу</div>
+        <div class="price-card-desc">Для 2 человек. Постоянный ВНЖ. Через год — подача на гражданство. Дети до 10 лет — упрощённое гражданство. Переводы и пошлины включены.</div>
+        <div class="price-card-amount">$1 200 <span>за пакет</span></div>
+        <button class="modal-btn" onclick="openModal('modal-marriage')">Что входит в пакет →</button>
+      </div>
+
+      <div class="price-card">
+        <div class="price-card-name">Политическое убежище</div>
+        <div class="price-card-desc">Для 1 человека. Временный ВНЖ на 1 год с правом продления и последующего гражданства.</div>
+        <div class="price-card-amount">$800 <span>за пакет</span></div>
+        <button class="modal-btn" onclick="openModal('modal-asylum')">Что входит в пакет →</button>
+      </div>
+
+      <div class="price-card">
+        <div class="price-card-name">Ребёнок-аргентинец</div>
+        <div class="price-card-desc">Для семьи из 4 человек. Постоянный ВНЖ для всей семьи. Подача на гражданство детям до 10 лет. Переводы и пошлины включены в стоимость.</div>
+        <div class="price-card-amount">$3 900 <span>за пакет</span></div>
+        <button class="modal-btn" onclick="openModal('modal-argentina')">Что входит в пакет →</button>
+      </div>
+
+      <div class="price-card">
+        <div class="price-card-name">Инвестиции / бизнес</div>
+        <div class="price-card-desc">ВНЖ на 4 года с правом перехода на постоянный ВНЖ. Гражданство через 8 лет. Для семьи из 4 человек. Стоимость переводов и пошлин включена.</div>
+        <div class="price-card-amount">$4 900 <span>за пакет</span></div>
+        <button class="modal-btn" onclick="openModal('modal-invest')">Что входит в пакет →</button>
+      </div>
+
+    </div>
+
+    <div style="margin-top: 40px;">
+      <p class="extras-title">Гражданство и дополнительные услуги</p>
+      <ul class="extras-list">
+        <li>Продление туристической визы в Рио <span class="price">$200</span></li>
+        <li>Получение карточки ВНЖ / СИН по доверенности <span class="price">$200</span></li>
+        <li>Сопровождение в государственных органах <span class="price">$200</span></li>
+        <li>Актуализация CPF онлайн <span class="price">$100</span></li>
+        <li>Запись в консульство РФ в Рио / Бразилиа <span class="price">$50</span></li>
+        <li>Вводная консультация <span class="price">$50</span></li>
+      </ul>
+    </div>
+
+    <div style="text-align: center; margin-top: 48px;">
+      <a href="https://t.me/rio_das_magnus" class="btn btn-accent" target="_blank">Получить расчёт для вашей ситуации</a>
+    </div>
+  </div>
+</section>
+
+<!-- BIRTHS BANNER -->
+<section style="background: var(--paper); padding: 0 0 0 0; border-top: 1px solid var(--mid);">
+  <div class="container" style="padding-top: 0; padding-bottom: 0;">
+    <div class="births-banner">
+      <div class="births-banner-text">
+        <span class="births-banner-label">Отдельная услуга</span>
+        <strong>Сопровождение родов в Бразилии</strong>
+        <p>Подготовка к родам, выбор роддома, сопровождение сертифицированной доулой в Рио-де-Жанейро и Бразилиа.</p>
+      </div>
+      <a href="https://borninbrazil.baby" target="_blank" class="btn btn-births">Узнать подробнее →</a>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="process-section" id="process">
+  <div class="container">
+    <span class="section-label">Как мы работаем</span>
+    <h2 class="section-title">Весь процесс — прозрачно</h2>
+    <div class="divider"></div>
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="step-num">01</div>
+        <h3>Запрос и консультация</h3>
+        <p>Пишете в Telegram или WhatsApp. Обсуждаем вашу ситуацию, подбираем оптимальное основание.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">02</div>
+        <h3>Сбор документов онлайн</h3>
+        <p>Работаем по электронным сканам. Переводим документы, заполняем анкеты, оплачиваем пошлины — всё до вашего приезда. Оригиналы остаются у вас.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">03</div>
+        <h3>Подача и сопровождение</h3>
+        <p>Записываем вас в полицию или консульство. При подаче в Бразилии — наш переводчик рядом. Весь процесс в приватном чате перед вашими глазами.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">04</div>
+        <h3>Результат</h3>
+        <p>Отслеживаем статус заявки и сообщаем о каждом шаге. Средний срок от подачи до получения карточки — 1,5 месяца.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews-section" id="reviews">
+  <div class="container">
+    <span class="section-label">Клиенты о нас</span>
+    <h2 class="section-title">Отзывы</h2>
+    <div class="divider"></div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Большая удача иметь такую поддержку в Бразилии. Много раз помогли решить очень серьёзные вопросы. Внимание, пунктуальность, компетентность и доброжелательность. Рекомендую!</p>
+        <div class="review-author">Ishvara das</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Обращалась за помощью в оформлении Nomad визы. Самые лучшие впечатления! Катя всегда на связи, всё знает, все особенности местной бюрократии победила. Очень рекомендую.</p>
+        <div class="review-author">Sklise</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Ребята всегда на связи, быстро и оперативно всё решают. Обращались и по вопросам документов, и по вопросам перевода денег и даже по мелким бытовым. Всё чётко, всегда сделают и подскажут.</p>
+        <div class="review-author">Ася Исаева</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Брал полное сопровождение — всё понравилось. Тёплое отношение, я сам бы не разобрался и тем более не справился бы так быстро со всем, что нужно для ассимиляции в Бразилии.</p>
+        <div class="review-author">Nick Levankov</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Рекомендую! Все процессы прошли успешно, без лишних вопросов. Очень отзывчивые.</p>
+        <div class="review-author">Александр Исаев</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="team-section" id="team">
+  <div class="container">
+    <span class="section-label" data-i18n="teamLabel">Команда</span>
+    <h2 class="section-title" data-i18n="teamTitle">Свои в Бразилии — кто мы</h2>
+    <div class="divider"></div>
+    <p class="section-sub" data-i18n="teamSub">Мы — команда русскоговорящих профессионалов. Подача документов в любом штате.</p>
+    <div class="team-grid">
+
+      <div class="team-card">
+        <div class="team-card-inner">
+          <div class="team-card-text">
+            <span class="team-role" id="t1role">Основатель проекта</span>
+            <div class="team-name" id="t1name">Илья Магнус</div>
+            <p class="team-bio" id="t1bio">Основал проект «Свои в Бразилии». Ведёт YouTube-канал о жизни в Бразилии.</p>
+          </div>
+          <div class="team-photo" style="background-image: url('photo-ilya.jpg');"><span class="team-photo-hint">фото</span></div>
+        </div>
+      </div>
+
+      <div class="team-card">
+        <div class="team-card-inner">
+          <div class="team-card-text">
+            <span class="team-role" id="t2role">Иммиграционный специалист</span>
+            <div class="team-name" id="t2name">Екатерина Магнус</div>
+            <p class="team-bio" id="t2bio">Сопроводила более 200 оформлений ВНЖ и гражданства. Знает все тонкости бразильской бюрократии.</p>
+          </div>
+          <div class="team-photo" style="background-image: url('photo-katerina.jpg');"><span class="team-photo-hint">фото</span></div>
+        </div>
+      </div>
+
+      <div class="team-card">
+        <div class="team-card-inner">
+          <div class="team-card-text">
+            <span class="team-role" id="t3role">Сертифицированная доула · Рио-де-Жанейро</span>
+            <div class="team-name" id="t3name">Ольга Янковская</div>
+            <p class="team-bio">Рядом в самый важный момент.</p>
+          </div>
+          <div class="team-photo" style="background-image: url('photo-olga.jpg');"><span class="team-photo-hint">фото</span></div>
+        </div>
+      </div>
+
+      <div class="team-card">
+        <div class="team-card-inner">
+          <div class="team-card-text">
+            <span class="team-role" id="t4role">Сертифицированная доула · Бразилиа</span>
+            <div class="team-name" id="t4name">Айфуша Калина</div>
+            <p class="team-bio">Рядом в самый важный момент.</p>
+          </div>
+          <div class="team-photo" style="background-image: url('photo-4.jpg');"><span class="team-photo-hint">фото</span></div>
+        </div>
+      </div>
+
+      <div class="team-card">
+        <div class="team-card-inner">
+          <div class="team-card-text">
+            <span class="team-role" id="t5role">Координатор команды</span>
+            <div class="team-name" id="t5name">Елена Чуркина</div>
+            <p class="team-bio" id="t5bio">На всех этапах я на связи.</p>
+          </div>
+          <div class="team-photo" style="background-image: url('photo-5.jpg');"><span class="team-photo-hint">фото</span></div>
+        </div>
+      </div>
+
+    </div>
+    <p style="margin-top: 28px; font-size: 0.85rem; color: var(--muted);" data-i18n="teamFooter">
+      Работаем с гражданами любых стран — физическими и юридическими лицами. Говорим на русском, английском, португальском и французском языках.
+    </p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section" id="faq">
+  <div class="container">
+    <span class="section-label">Частые вопросы</span>
+    <h2 class="section-title">FAQ</h2>
+    <div class="divider"></div>
+    <div class="faq-list">
+
+      <details>
+        <summary>Сколько времени занимает оформление ВНЖ?</summary>
+        <div class="faq-answer">От подачи документов до получения карточки — в среднем 1,5 месяца.</div>
+      </details>
+
+      <details>
+        <summary>Нужно ли приезжать в Бразилию для подачи?</summary>
+        <div class="faq-answer">Подача на ВНЖ возможна с территории Бразилии. Исключением является только ВНЖ Nomad — его оформление можно начать из консульства Бразилии в вашей стране гражданства.</div>
+      </details>
+
+      <details>
+        <summary>Какие документы нужны?</summary>
+        <div class="faq-answer">Основной пакет: свидетельство о рождении с апостилем, справка об отсутствии судимости с апостилем, свидетельство о браке (если есть) с апостилем. Точный список зависит от основания — уточним на консультации.</div>
+      </details>
+
+      <details>
+        <summary>Можно ли оформить ВНЖ, не имея всех документов?</summary>
+        <div class="faq-answer">Да. Если документов не хватает, их можно истребовать в консульстве РФ в Бразилии — мы поможем с этим процессом.</div>
+      </details>
+
+      <details>
+        <summary>Сколько стоит жизнь в Бразилии?</summary>
+        <div class="faq-answer">Для семьи из 3–4 человек — около $3 000 в месяц. Зависит от города и образа жизни: Рио дороже, другие штаты заметно бюджетнее.</div>
+      </details>
+
+      <details>
+        <summary>При оформлении убежища нужно ли оставаться в Бразилии?</summary>
+        <div class="faq-answer">Нет, ваше передвижение никто не ограничивает, документы остаются у вас. Однако если хотите сохранить ваш статус, необходимо уведомлять об этом контролирующие органы.</div>
+      </details>
+
+      <details>
+        <summary>Могут ли старшие дети получить гражданство, если младший родился в Бразилии?</summary>
+        <div class="faq-answer">Да. Для детей до 10 лет гражданство оформляется по упрощённой схеме. Старшие дети оформляют через стандартный путь по ВНЖ.</div>
+      </details>
+
+      <details>
+        <summary>Сколько стоят роды в Бразилии?</summary>
+        <div class="faq-answer">В государственном роддоме — бесплатно при наличии полиса SUS. В платной клинике — в среднем от $3 000 до $10 000 в зависимости от учреждения.</div>
+      </details>
+
+      <details>
+        <summary>Нужно ли знать португальский?</summary>
+        <div class="faq-answer">Для подачи на ВНЖ — нет. Для получения гражданства подтверждение знания языка потребуется. Мы обеспечиваем переводчика на всех этапах личного взаимодействия с госорганами.</div>
+      </details>
+
+      <details>
+        <summary>Могу ли я оформить шенгенскую визу, находясь в Бразилии?</summary>
+        <div class="faq-answer">Да, при наличии ВНЖ. Бразилия — хороший плацдарм для подачи на Шенген и визу США.</div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="contact">
+  <div class="container">
+    <h2 class="section-title">Готовы начать?</h2>
+    <p class="cta-sub">Напишите нам — разберём вашу ситуацию и подберём оптимальный путь. Вводная консультация — $50. Первичный разбор в чате — бесплатно.</p>
+    <div class="cta-actions">
+      <a href="https://t.me/rio_das_magnus" class="btn btn-white" target="_blank">Написать в Telegram</a>
+      <a href="https://wa.me/5522997276755" class="btn btn-outline-white" target="_blank">Написать в WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTS -->
+<section class="contacts-section">
+  <div class="container">
+    <span class="section-label" data-i18n="contactsLabel">Контакты</span>
+    <h2 class="section-title" data-i18n="contactsTitle">Связаться с нами</h2>
+    <div class="divider"></div>
+    <div class="contacts-inner">
+      <div>
+        <div class="contact-item">
+          <div class="contact-label" data-i18n="contactPhone">Телефон / WhatsApp</div>
+          <a href="tel:+5522997276755" class="contact-value">+55 22 997-27-6755</a>
+        </div>
+        <div class="contact-item">
+          <div class="contact-label">Email</div>
+          <a href="mailto:riodasmagnus@gmail.com" class="contact-value">riodasmagnus@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <div class="contact-label" data-i18n="contactLegal">Юридическое лицо</div>
+          <div class="contact-value" style="color: rgba(255,255,255,0.5); font-size: 0.85rem;">INTERFIN GROUP LTDA · CNPJ 53.879.708/0001-20</div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-label" data-i18n="contactTg">Telegram-канал</div>
+          <a href="https://t.me/svoibrazil" class="contact-value" target="_blank">t.me/svoibrazil</a>
+        </div>
+      </div>
+      <div class="contact-buttons">
+        <a href="https://t.me/rio_das_magnus" class="btn btn-tg" target="_blank" data-i18n="contactBtnTg">Написать в Telegram</a>
+        <a href="https://wa.me/5522997276755" class="btn btn-wa" target="_blank" data-i18n="contactBtnWa">Написать в WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <!--
+    ╔══════════════════════════════════════════════════════════════╗
+    ║  КАК ПОДКЛЮЧИТЬ ОФЕРТУ (PDF)                                ║
+    ╠══════════════════════════════════════════════════════════════╣
+    ║  1. Переименуйте файл оферты в: oferta.pdf                  ║
+    ║  2. Загрузите его в корневую папку сайта (рядом с           ║
+    ║     index.html).                                            ║
+    ║     Пример для вашего сервера:                              ║
+    ║     /var/www/svoibrazil.ru/oferta.pdf                       ║
+    ║  3. Ссылка href="/oferta.pdf" заработает автоматически.     ║
+    ║                                                             ║
+    ║  Если хотите загружать через панель Tilda:                  ║
+    ║  Настройки сайта → Файлы → загрузите oferta.pdf →          ║
+    ║  скопируйте полученный URL и вставьте вместо /oferta.pdf    ║
+    ║  в двух местах: в секции PRICES и в футере.                 ║
+    ╚══════════════════════════════════════════════════════════════╝
+  -->
+  <div>
+    © 2022–2026 INTERFIN GROUP LTDA · CNPJ 53.879.708/0001-20 · Бразилия<br>
+    <a href="#" id="oferta-link-footer" target="_blank">Публичная оферта</a> · <a href="#" id="privacy-link-footer" target="_blank">Политика конфиденциальности</a>
+  </div>
+</footer>
+
+<!-- ══════════════════════════════════════════
+     МОДАЛЬНЫЕ ОКНА — ПАКЕТЫ ОФОРМЛЕНИЯ
+══════════════════════════════════════════ -->
+
+<!-- По рождению ребёнка -->
+<div class="modal-overlay" id="modal-birth" onclick="closeModal(event, 'modal-birth')">
+  <div class="modal">
+    <button class="modal-close" onclick="document.getElementById('modal-birth').classList.remove('modal-open')">✕</button>
+    <div class="modal-tag tag-perm">Постоянный ВНЖ</div>
+    <h3 class="modal-title">По рождению ребёнка</h3>
+    <p class="modal-price">$1 900 · для семьи из 3 человек</p>
+    <div class="modal-cols">
+      <div>
+        <p class="modal-section-label">Что входит в пакет</p>
+        <ul class="modal-list">
+          <li>Консультация и подбор стратегии</li>
+          <li>Перевод всех документов на португальский</li>
+          <li>Оплата государственных пошлин</li>
+          <li>Заполнение анкет и форм</li>
+          <li>Запись в федеральную полицию</li>
+          <li>Сопровождение переводчиком при подаче</li>
+          <li>Оформление постоянного ВНЖ для обоих родителей</li>
+          <li>Подача на гражданство детям до 10 лет</li>
+          <li>Ведение процесса в приватном чате</li>
+          <li>Отслеживание статуса до получения карточки</li>
+        </ul>
+      </div>
+      <div>
+        <p class="modal-section-label">Требуемые документы</p>
+        <ul class="modal-list">
+          <li>Паспорт каждого члена семьи</li>
+          <li>Свидетельство о рождении ребёнка (бразильское)</li>
+          <li>Свидетельства о рождении родителей с апостилем</li>
+          <li>Справка об отсутствии судимости с апостилем</li>
+          <li>Свидетельство о браке с апостилем (если есть)</li>
+          <li>Регистрация CPF</li>
+          <li class="modal-list-note">Часть документов можно оформить через консульство вашей страны в Бразилии</li>
+                  <li>Регистрация CPF</li>
+          <li class="modal-list-note">Часть документов можно оформить через консульство вашей страны в Бразилии</li>
+        </ul>
+      </div>
+    </div>
+    <a href="https://t.me/rio_das_magnus?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21+%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82+%D0%BF%D0%B0%D0%BA%D0%B5%D1%82+%C2%AB%D0%9F%D0%BE+%D1%80%D0%BE%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D1%8E+%D1%80%D0%B5%D0%B1%D1%91%D0%BD%D0%BA%D0%B0%C2%BB.+%D0%A5%D0%BE%D1%87%D1%83+%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C+%D0%BF%D0%BE%D0%B4%D1%80%D0%BE%D0%B1%D0%BD%D0%B5%D0%B5." target="_blank" class="btn btn-primary modal-cta">Написать в Telegram</a>
+  </div>
+</div>
+
+<!-- Студенческий -->
+<div class="modal-overlay" id="modal-study" onclick="closeModal(event, 'modal-study')">
+  <div class="modal">
+    <button class="modal-close" onclick="document.getElementById('modal-study').classList.remove('modal-open')">✕</button>
+    <div class="modal-tag tag-temp">Временный ВНЖ · 1 год</div>
+    <h3 class="modal-title">Студенческий</h3>
+    <p class="modal-price">$1 900 · для семьи из 3 человек</p>
+    <div class="modal-cols">
+      <div>
+        <p class="modal-section-label">Что входит в пакет</p>
+        <ul class="modal-list">
+          <li>Консультация и подбор учебного заведения</li>
+          <li>Помощь с поступлением и документами учреждения</li>
+          <li>Перевод всех документов на португальский</li>
+          <li>Оплата государственных пошлин</li>
+          <li>Заполнение анкет и форм</li>
+          <li>Запись в федеральную полицию</li>
+          <li>Сопровождение переводчиком при подаче</li>
+          <li>ВНЖ для всей семьи (3 человека)</li>
+          <li>Ведение процесса в приватном чате</li>
+          <li>Отслеживание статуса до получения карточки</li>
+        </ul>
+      </div>
+      <div>
+        <p class="modal-section-label">Требуемые документы</p>
+        <ul class="modal-list">
+          <li>Паспорт каждого члена семьи</li>
+          <li>Свидетельства о рождении с апостилем</li>
+          <li>Справка об отсутствии судимости с апостилем</li>
+          <li>Свидетельство о браке с апостилем (если есть)</li>
+          <li>Подтверждение зачисления в учебное заведение</li>
+          <li>Регистрация CPF</li>
+          <li class="modal-list-note">Часть документов можно оформить через консульство вашей страны в Бразилии</li>
+                  <li>Регистрация CPF</li>
+          <li class="modal-list-note">Часть документов можно оформить через консульство вашей страны в Бразилии</li>
+        </ul>
+      </div>
+    </div>
+    <a href="https://t.me/rio_das_magnus?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21+%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82+%D0%BF%D0%B0%D0%BA%D0%B5%D1%82+%C2%AB%D0%A1%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9%C2%BB.+%D0%A5%D0%BE%D1%87%D1%83+%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C+%D0%BF%D0%BE%D0%B4%D1%80%D0%BE%D0%B1%D0%BD%D0%B5%D0%B5." target="_blank" class="btn btn-primary modal-cta">Написать в Telegram</a>
+  </div>
+</div>
+
+<!-- Цифровой кочевник -->
+<div class="modal-overlay" id="modal-nomad" onclick="closeModal(event, 'modal-nomad')">
+  <div class="modal">
+    <button class="modal-close" onclick="document.getElementById('modal-nomad').classList.remove('modal-open')">✕</button>
+    <div class="modal-tag tag-temp">Временный ВНЖ · 1 год</div>
+    <h3 class="modal-title">Цифровой кочевник</h3>
+    <p class="modal-price">$1 200 · для 1 человека</p>
+    <div class="modal-cols">
+      <div>
+        <p class="modal-section-label">Что входит в пакет</p>
+        <ul class="modal-list">
+          <li>Консультация и подбор стратегии</li>
+          <li>Перевод всех документов на португальский</li>
+          <li>Оплата государственных пошлин</li>
+          <li>Заполнение анкет и форм</li>
+          <li>Запись в федеральную полицию</li>
+          <li>Сопровождение переводчиком при подаче</li>
+          <li>Ведение процесса в приватном чате</li>
+          <li>Отслеживание статуса до получения карточки</li>
+        </ul>
+      </div>
+      <div>
+        <p class="modal-section-label">Требуемые документы</p>
+        <ul class="modal-list">
+          <li>Паспорт</li>
+          <li>Свидетельство о рождении с апостилем</li>
+          <li>Справка об отсутствии судимости с апостилем</li>
+          <li>Подтверждение дохода (договор, выписка, справка)</li>
+          <li>Регистрация CPF</li>
+          <li class="modal-list-note">Часть документов можно оформить через консульство вашей страны в Бразилии</li>
+                  <li>Регистрация CPF</li>
+          <li class="modal-list-note">Часть документов можно оформить через консульство вашей страны в Бразилии</li>
+        </ul>
+      </div>
+    </div>
+    <a href="https://t.me/rio_das_magnus?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21+%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82+%D0%BF%D0%B0%D0%BA%D0%B5%D1%82+%C2%AB%D0%A6%D0%B8%D1%84%D1%80%D0%BE%D0%B2%D0%BE%D0%B9+%D0%BA%D0%BE%D1%87%D0%B5%D0%B2%D0%BD%D0%B8%D0%BA%C2%BB.+%D0%A5%D0%BE%D1%87%D1%83+%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C+%D0%BF%D0%BE%D0%B4%D1%80%D0%BE%D0%B1%D0%BD%D0%B5%D0%B5." target="_blank" class="btn btn-primary modal-cta">Написать в Telegram</a>
+  </div>
+</div>
+
+<!-- По браку / союзу -->
+<div class="modal-overlay" id="modal-marriage" onclick="closeModal(event, 'modal-marriage')">
+  <div class="modal">
+    <button class="modal-close" onclick="document.getElementById('modal-marriage').classList.remove('modal-open')">✕</button>
+    <div class="modal-tag tag-perm">Постоянный ВНЖ</div>
+    <h3 class="modal-title">По браку / союзу</h3>
+    <p class="modal-price">$1 200 · для 2 человек</p>
+    <div class="modal-cols">
+      <div>
+        <p class="modal-section-label">Что входит в пакет</p>
+        <ul class="modal-list">
+          <li>Консультация и подбор стратегии</li>
+          <li>Перевод всех документов на португальский</li>
+          <li>Оплата государственных пошлин</li>
+          <li>Заполнение анкет и форм</li>
+          <li>Запись в федеральную полицию</li>
+          <li>Сопровождение переводчиком при подаче</li>
+          <li>Постоянный ВНЖ для супруга-иностранца</li>
+          <li>Ведение процесса в приватном чате</li>
+          <li>Отслеживание статуса до получения карточки</li>
+        </ul>
+      </div>
+      <div>
+        <p class="modal-section-label">Требуемые документы</p>
+        <ul class="modal-list">
+          <li>Паспорт каждого супруга</li>
+          <li>Свидетельство о браке или документ об устойчивом союзе с гражданином Бразилии с апостилем</li>
+          <li>Свидетельство о рождении с апостилем</li>
+          <li>Справка об отсутствии судимости с апостилем</li>
+          <li>Документы супруга-гражданина Бразилии (CPF, RG)</li>
+          <li>Регистрация CPF</li>
+          <li class="modal-list-note">Часть документов можно оформить через консульство вашей страны в Бразилии</li>
+                  <li>Регистрация CPF</li>
+          <li class="modal-list-note">Часть документов можно оформить через консульство вашей страны в Бразилии</li>
+        </ul>
+      </div>
+    </div>
+    <a href="https://t.me/rio_das_magnus?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21+%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82+%D0%BF%D0%B0%D0%BA%D0%B5%D1%82+%C2%AB%D0%9F%D0%BE+%D0%B1%D1%80%D0%B0%D0%BA%D1%83+%2F+%D1%81%D0%BE%D1%8E%D0%B7%D1%83%C2%BB.+%D0%A5%D0%BE%D1%87%D1%83+%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C+%D0%BF%D0%BE%D0%B4%D1%80%D0%BE%D0%B1%D0%BD%D0%B5%D0%B5." target="_blank" class="btn btn-primary modal-cta">Написать в Telegram</a>
+  </div>
+</div>
+
+<!-- Политическое убежище -->
+<div class="modal-overlay" id="modal-asylum" onclick="closeModal(event, 'modal-asylum')">
+  <div class="modal">
+    <button class="modal-close" onclick="document.getElementById('modal-asylum').classList.remove('modal-open')">✕</button>
+    <div class="modal-tag tag-temp">Временный ВНЖ · 1 год</div>
+    <h3 class="modal-title">Политическое убежище</h3>
+    <p class="modal-price">$800 · для 1 человека</p>
+    <div class="modal-cols">
+      <div>
+        <p class="modal-section-label">Что входит в пакет</p>
+        <ul class="modal-list">
+          <li>Консультация и подбор стратегии</li>
+          <li>Перевод всех документов на португальский</li>
+          <li>Оплата государственных пошлин</li>
+          <li>Заполнение анкет и форм</li>
+          <li>Сопровождение в CONARE (орган по беженцам)</li>
+          <li>Сопровождение переводчиком при подаче</li>
+          <li>Ведение процесса в приватном чате</li>
+          <li>Отслеживание статуса до получения карточки</li>
+        </ul>
+      </div>
+      <div>
+        <p class="modal-section-label">Требуемые документы</p>
+        <ul class="modal-list">
+          <li>Паспорт (при наличии)</li>
+          <li>Любой документ, удостоверяющий личность</li>
+          <li>Свидетельство о рождении (при наличии)</li>
+          <li>Доказательства не требуются</li>
+          <li>Регистрация CPF</li>
+          <li class="modal-list-note">Часть документов можно оформить через консульство вашей страны в Бразилии</li>
+                  <li>Регистрация CPF</li>
+          <li class="modal-list-note">Часть документов можно оформить через консульство вашей страны в Бразилии</li>
+        </ul>
+      </div>
+    </div>
+    <a href="https://t.me/rio_das_magnus?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21+%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82+%D0%BF%D0%B0%D0%BA%D0%B5%D1%82+%C2%AB%D0%9F%D0%BE%D0%BB%D0%B8%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B5+%D1%83%D0%B1%D0%B5%D0%B6%D0%B8%D1%89%D0%B5%C2%BB.+%D0%A5%D0%BE%D1%87%D1%83+%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C+%D0%BF%D0%BE%D0%B4%D1%80%D0%BE%D0%B1%D0%BD%D0%B5%D0%B5." target="_blank" class="btn btn-primary modal-cta">Написать в Telegram</a>
+  </div>
+</div>
+
+<!-- Ребёнок-аргентинец -->
+<div class="modal-overlay" id="modal-argentina" onclick="closeModal(event, 'modal-argentina')">
+  <div class="modal">
+    <button class="modal-close" onclick="document.getElementById('modal-argentina').classList.remove('modal-open')">✕</button>
+    <div class="modal-tag tag-perm">Постоянный ВНЖ</div>
+    <h3 class="modal-title">Ребёнок-аргентинец</h3>
+    <p class="modal-price">$3 500 · для семьи из 4 человек</p>
+    <div class="modal-cols">
+      <div>
+        <p class="modal-section-label">Что входит в пакет</p>
+        <ul class="modal-list">
+          <li>Консультация и подбор стратегии</li>
+          <li>Перевод всех документов на португальский</li>
+          <li>Оплата государственных пошлин</li>
+          <li>Заполнение анкет и форм (MERCOSUL)</li>
+          <li>Запись в федеральную полицию</li>
+          <li>Сопровождение переводчиком при подаче</li>
+          <li>Постоянный ВНЖ для всей семьи</li>
+          <li>Подача на гражданство детям до 10 лет</li>
+          <li>Ведение процесса в приватном чате</li>
+          <li>Отслеживание статуса до получения карточки</li>
+        </ul>
+      </div>
+      <div>
+        <p class="modal-section-label">Требуемые документы</p>
+        <ul class="modal-list">
+          <li>Паспорт каждого члена семьи</li>
+          <li>Аргентинский паспорт / DNI ребёнка</li>
+          <li>Свидетельства о рождении с апостилем</li>
+          <li>Справка об отсутствии судимости с апостилем</li>
+          <li>Свидетельство о браке с апостилем (если есть)</li>
+          <li>Регистрация CPF</li>
+          <li class="modal-list-note">Часть документов можно оформить через консульство вашей страны в Бразилии</li>
+                  <li>Регистрация CPF</li>
+          <li class="modal-list-note">Часть документов можно оформить через консульство вашей страны в Бразилии</li>
+        </ul>
+      </div>
+    </div>
+    <a href="https://t.me/rio_das_magnus?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21+%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82+%D0%BF%D0%B0%D0%BA%D0%B5%D1%82+%C2%AB%D0%A0%D0%B5%D0%B1%D1%91%D0%BD%D0%BE%D0%BA-%D0%B0%D1%80%D0%B3%D0%B5%D0%BD%D1%82%D0%B8%D0%BD%D0%B5%D1%86%C2%BB.+%D0%A5%D0%BE%D1%87%D1%83+%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C+%D0%BF%D0%BE%D0%B4%D1%80%D0%BE%D0%B1%D0%BD%D0%B5%D0%B5." target="_blank" class="btn btn-primary modal-cta">Написать в Telegram</a>
+  </div>
+</div>
+
+<!-- Инвестиции / бизнес -->
+<div class="modal-overlay" id="modal-invest" onclick="closeModal(event, 'modal-invest')">
+  <div class="modal">
+    <button class="modal-close" onclick="document.getElementById('modal-invest').classList.remove('modal-open')">✕</button>
+    <div class="modal-tag tag-temp">Временный ВНЖ · 4 года → Постоянный ВНЖ</div>
+    <h3 class="modal-title">Инвестиции / бизнес</h3>
+    <p class="modal-price">$4 900 · для семьи из 4 человек</p>
+    <div class="modal-cols">
+      <div>
+        <p class="modal-section-label">Что входит в пакет</p>
+        <ul class="modal-list">
+          <li>Консультация по структуре инвестиций</li>
+          <li>Перевод всех документов на португальский</li>
+          <li>Оплата государственных пошлин</li>
+          <li>Заполнение анкет и форм</li>
+          <li>Запись в федеральную полицию</li>
+          <li>Сопровождение переводчиком при подаче</li>
+          <li>ВНЖ на 4 года для всей семьи</li>
+          <li>Сопровождение перехода на постоянный ВНЖ</li>
+          <li>Ведение процесса в приватном чате</li>
+          <li>Отслеживание статуса до получения карточки</li>
+        </ul>
+      </div>
+      <div>
+        <p class="modal-section-label">Требуемые документы</p>
+        <ul class="modal-list">
+          <li>Паспорт каждого члена семьи</li>
+          <li>Свидетельства о рождении с апостилем</li>
+          <li>Справка об отсутствии судимости с апостилем</li>
+          <li>Свидетельство о браке с апостилем (если есть)</li>
+          <li>Документы, подтверждающие инвестиции или владение бизнесом</li>
+          <li>Выписки банковских счетов</li>
+          <li>Регистрация CPF</li>
+          <li class="modal-list-note">Часть документов можно оформить через консульство вашей страны в Бразилии</li>
+                  <li>Регистрация CPF</li>
+          <li class="modal-list-note">Часть документов можно оформить через консульство вашей страны в Бразилии</li>
+        </ul>
+      </div>
+    </div>
+    <a href="https://t.me/rio_das_magnus?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21+%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82+%D0%BF%D0%B0%D0%BA%D0%B5%D1%82+%C2%AB%D0%98%D0%BD%D0%B2%D0%B5%D1%81%D1%82%D0%B8%D1%86%D0%B8%D0%B8+%2F+%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%C2%BB.+%D0%A5%D0%BE%D1%87%D1%83+%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C+%D0%BF%D0%BE%D0%B4%D1%80%D0%BE%D0%B1%D0%BD%D0%B5%D0%B5." target="_blank" class="btn btn-primary modal-cta">Написать в Telegram</a>
+  </div>
+</div>
+
+<script>
+// ═══════════════════════════════════════════════
+//  LANGUAGE SWITCHER — RU / EN
+// ═══════════════════════════════════════════════
+const translations = {
+  ru: {
+    'nav.basis': 'Основания',
+    'nav.prices': 'Цены',
+    'nav.process': 'Как работаем',
+    'nav.reviews': 'Отзывы',
+    'nav.cta': 'Написать нам',
+    'hero.label': 'Работаем с 2022 года',
+    'hero.h1': 'ВНЖ и гражданство Бразилии — <em>без лишних нервов</em>',
+    'hero.sub': 'Помогаем русскоязычным семьям легализоваться в Бразилии. Весь процесс — онлайн, в приватном чате, оригиналы документов остаются у вас. Результат — за 1–2 месяца.',
+    'hero.btn1': 'Написать в Telegram',
+    'hero.btn2': 'Смотреть цены',
+    'stat1': 'оформлений ВНЖ и гражданства',
+    'stat2': 'средний срок получения ВНЖ',
+    'stat3n': 'с 2022',
+    'stat3': 'работаем в Бразилии',
+    'stat4n': 'любой штат',
+    'stat4': 'оформляем по всей стране',
+    'contactPhone': 'Телефон / WhatsApp',
+    'contactLegal': 'Юридическое лицо',
+    'contactTg': 'Telegram-канал',
+    'contactBtnTg': 'Написать в Telegram',
+    'contactBtnWa': 'Написать в WhatsApp',
+  },
+  en: {
+    'nav.basis': 'Residency Options',
+    'nav.prices': 'Prices',
+    'nav.process': 'How It Works',
+    'nav.reviews': 'Reviews',
+    'nav.cta': 'Contact Us',
+    'hero.label': 'Working since 2022',
+    'hero.h1': 'Brazilian Residency & Citizenship — <em>without the stress</em>',
+    'hero.sub': 'We help families obtain legal residency in Brazil. The entire process is handled online, in a private chat — your original documents stay with you. Results in 1–2 months.',
+    'hero.btn1': 'Message us on Telegram',
+    'hero.btn2': 'View prices',
+    'stat1': 'residency & citizenship cases',
+    'stat2': 'average time to residency card',
+    'stat3n': 'since 2022',
+    'stat3': 'working in Brazil',
+    'stat4n': 'any state',
+    'stat4': 'we operate nationwide',
+    'contactPhone': 'Phone / WhatsApp',
+    'contactLegal': 'Legal entity',
+    'contactTg': 'Telegram channel',
+    'contactBtnTg': 'Message us on Telegram',
+    'contactBtnWa': 'Message us on WhatsApp',
+  }
+};
+
+// Page sections translated as innerHTML blocks
+const sectionTranslations = {
+  ru: {
+    passportBar: '🇧🇷 Бразильский паспорт — <strong>Европа, Великобритания, Япония без визы</strong> · Виза США на 10 лет · С ВНЖ Бразилии — удобная подача на Шенген и визу США прямо отсюда',
+    whyLabel: 'Зачем это нужно',
+    whyTitle: 'Что даёт ВНЖ Бразилии',
+    why: [
+      { icon: '🏦', title: 'Банки и финансы', text: 'Счета в международных банках, платёжные системы, криптобиржи — всё открывается с бразильским ВНЖ.' },
+      { icon: '🛂', title: 'Шенген и США', text: 'С ВНЖ Бразилии можно подавать на шенгенскую визу и визу США прямо отсюда, без отказов.' },
+      { icon: '🚗', title: 'Водительские права', text: 'При наличии ВНЖ — возможность получения бразильских прав без пересдачи экзамена на основании ваших действующих прав.' },
+      { icon: '📱', title: 'YouTube, TikTok, Fanvu и другие', text: 'Монетизация аккаунтов на международных платформах — без ограничений.' },
+      { icon: '✈️', title: 'Свобода передвижения', text: 'Выезжайте и возвращайтесь без ограничений — ВНЖ не привязывает вас к стране.' },
+      { icon: '🏡', title: 'Гражданство семье', text: 'Постоянный ВНЖ → через 1 год подача на паспорт. Дети до 10 лет получают паспорт за 6 месяцев.' },
+    ],
+    vnjLabel: 'Основания для ВНЖ',
+    vnjTitle: 'Выберите подходящий путь',
+    vnj: [
+      { tag: 'temp', tagText: 'Временный ВНЖ · 1 год', title: 'Цифровой кочевник (Nomad Visa)', text: 'Для фрилансеров, удалённых сотрудников и всех, у кого есть подтверждённый доход. Подходит для всей семьи. Продлевается ежегодно.', path: '' },
+      { tag: 'temp', tagText: 'Временный ВНЖ · 1 год', title: 'Учёба (взрослые и дети)', text: 'На основании учёбы в школе, детском саду, языковом курсе или университете — для всей семьи. Помогаем с поступлением и документами.', path: 'продлевается на весь срок учёбы' },
+      { tag: 'perm', tagText: 'Постоянный ВНЖ', title: 'Рождение ребёнка', text: 'Ребёнок, рождённый в Бразилии, автоматически становится гражданином. Родители получают постоянный ВНЖ и через год могут подать на паспорт. Роды в частном или государственном роддоме — бесплатно по SUS.', path: 'гражданство родителям через 1 год' },
+      { tag: 'perm', tagText: 'Постоянный ВНЖ', title: 'Брак с гражданином Бразилии', text: 'Официальный брак или «устойчивый союз» (união estável) дают право на постоянный ВНЖ сразу. Через год — документы на гражданство.', path: 'гражданство через 1 год' },
+      { tag: 'temp', tagText: 'Временный ВНЖ · 1 год', title: 'Политическое убежище', text: 'Бразилия лояльна к беженцам — доказательств и адвокатов при подаче не требуется. ВНЖ выдаётся на 1 год с правом продления. Можно выезжать и возвращаться с уведомлением организации.', path: 'гражданство через 5–10 лет' },
+      { tag: 'temp', tagText: 'Временный ВНЖ · 4 года → Постоянный ВНЖ', title: 'Инвестиции', text: 'Покупка недвижимости от 1 млн реалов или инвестиции в бизнес от 500 тыс. реалов. Распространяется на всех членов семьи. Даёт право работать и вести бизнес в Бразилии.', path: 'гражданство через 8 лет' },
+      { tag: 'perm', tagText: 'Постоянный ВНЖ', title: 'Ребёнок-аргентинец', text: 'Оформление ВНЖ на основании соглашения MERCOSUL, если у вашего ребёнка аргентинское гражданство. Дети до 10 лет получают гражданство Бразилии за 6 месяцев, а родители имеют право подать на паспорт через 4 года.', path: 'гражданство детям за 6 месяцев · родителям через 4 года' },
+    ],
+    pricesLabel: 'Прозрачные цены',
+    pricesTitle: 'Пакеты оформления',
+    pricesOferta: 'Услуги оказываются на основании',
+    pricesOfertaLink: 'публичной оферты',
+    modalBtnText: 'Что входит в пакет →',
+    modalServicesLabel: 'Что входит в пакет',
+    modalDocsLabel: 'Требуемые документы',
+    modalCtaText: 'Написать в Telegram',
+    extrasTitle: 'Дополнительные услуги',
+    extras: [
+      { name: 'Продление туристической визы в Рио', price: '$200' },
+      { name: 'Получение карточки ВНЖ / СИН по доверенности', price: '$200' },
+      { name: 'Сопровождение в государственных органах', price: '$200' },
+      { name: 'Актуализация CPF онлайн', price: '$100' },
+      { name: 'Запись в консульство РФ в Рио / Бразилиа', price: '$50' },
+      { name: 'Вводная консультация', price: '$50' },
+    ],
+    mainCta: 'Получить расчёт для вашей ситуации',
+    birthsBannerLabel: 'Отдельная услуга',
+    birthsBannerTitle: 'Сопровождение родов в Бразилии',
+    birthsBannerText: 'Подготовка к родам, выбор роддома, сопровождение сертифицированной доулой в Рио-де-Жанейро и Бразилиа.',
+    birthsBannerBtn: 'Узнать подробнее →',
+    processLabel: 'Как мы работаем',
+    processTitle: 'Весь процесс — прозрачно',
+    process: [
+      { n: '01', title: 'Запрос и консультация', text: 'Пишете в Telegram или WhatsApp. Обсуждаем вашу ситуацию, подбираем оптимальное основание.' },
+      { n: '02', title: 'Сбор документов онлайн', text: 'Работаем по электронным сканам. Переводим документы, заполняем анкеты, оплачиваем пошлины — всё до вашего приезда. Оригиналы остаются у вас.' },
+      { n: '03', title: 'Подача и сопровождение', text: 'Записываем вас в полицию или консульство. При подаче в Бразилии — наш переводчик рядом. Весь процесс в приватном чате перед вашими глазами.' },
+      { n: '04', title: 'Результат', text: 'Отслеживаем статус заявки и сообщаем о каждом шаге. Средний срок от подачи до получения карточки — 1,5 месяца.' },
+    ],
+    reviewsLabel: 'Клиенты о нас',
+    reviewsTitle: 'Отзывы',
+    teamLabel: 'Команда',
+    teamTitle: 'Свои в Бразилии — кто мы',
+    teamSub: 'Мы — команда русскоговорящих профессионалов. Подача документов в любом штате.',
+    teamFooter: 'Работаем с гражданами любых стран — физическими и юридическими лицами. Говорим на русском, английском, португальском и французском языках.',
+    team1role: 'Основатель проекта', team1name: 'Илья Магнус', team1bio: 'Основал проект «Свои в Бразилии». Ведёт YouTube-канал о жизни в Бразилии.',
+    team2role: 'Иммиграционный специалист', team2name: 'Екатерина Магнус', team2bio: 'Сопроводила более 200 оформлений ВНЖ и гражданства. Знает все тонкости бразильской бюрократии.',
+    team3role: 'Сертифицированная доула · Рио-де-Жанейро', team3name: 'Ольга Янковская', team3bio: 'Рядом в самый важный момент.',
+    team4role: 'Сертифицированная доула · Бразилиа', team4name: 'Айфуша Калина', team4bio: 'Рядом в самый важный момент.',
+    team5role: 'Координатор команды', team5name: 'Елена Чуркина', team5bio: 'На всех этапах я на связи.',
+    contactPhone: 'Телефон / WhatsApp',
+    contactLegal: 'Юридическое лицо',
+    contactTg: 'Telegram-канал',
+    contactBtnTg: 'Написать в Telegram',
+    contactBtnWa: 'Написать в WhatsApp',
+    faqLabel: 'Частые вопросы',
+    faq: [
+      { q: 'Сколько времени занимает оформление ВНЖ?', a: 'От подачи документов до получения карточки — в среднем 1,5 месяца.' },
+      { q: 'Нужно ли приезжать в Бразилию для подачи?', a: 'Подача на ВНЖ возможна с территории Бразилии. Исключением является только ВНЖ Nomad — его оформление можно начать из консульства Бразилии в вашей стране гражданства.' },
+      { q: 'Какие документы нужны?', a: 'Основной пакет: свидетельство о рождении с апостилем, справка об отсутствии судимости с апостилем, свидетельство о браке (если есть) с апостилем. Точный список зависит от основания — уточним на консультации.' },
+      { q: 'Можно ли оформить ВНЖ, не имея всех документов?', a: 'Да. Если документов не хватает, их можно истребовать в консульстве РФ в Бразилии — мы поможем с этим процессом.' },
+      { q: 'Сколько стоит жизнь в Бразилии?', a: 'Для семьи из 3–4 человек — около $3 000 в месяц. Зависит от города и образа жизни: Рио дороже, другие штаты заметно бюджетнее.' },
+      { q: 'При оформлении убежища нужно ли оставаться в Бразилии?', a: 'Нет, ваше передвижение никто не ограничивает, документы остаются у вас. Однако если хотите сохранить ваш статус, необходимо уведомлять об этом контролирующие органы.' },
+      { q: 'Могут ли старшие дети получить гражданство, если младший родился в Бразилии?', a: 'Да. Для детей до 10 лет гражданство оформляется по упрощённой схеме. Старшие дети оформляют через стандартный путь по ВНЖ.' },
+      { q: 'Сколько стоят роды в Бразилии?', a: 'В государственном роддоме — бесплатно при наличии полиса SUS. В платной клинике — в среднем от $3 000 до $10 000 в зависимости от учреждения.' },
+      { q: 'Нужно ли знать португальский?', a: 'Для подачи на ВНЖ — нет. Для получения гражданства подтверждение знания языка потребуется. Мы обеспечиваем переводчика на всех этапах личного взаимодействия с госорганами.' },
+      { q: 'Могу ли я оформить шенгенскую визу, находясь в Бразилии?', a: 'Да, при наличии ВНЖ. Бразилия — хороший плацдарм для подачи на Шенген и визу США.' },
+    ],
+    ctaTitle: 'Готовы начать?',
+    ctaSub: 'Напишите нам — разберём вашу ситуацию и подберём оптимальный путь. Вводная консультация — $50. Первичный разбор в чате — бесплатно.',
+    ctaBtn1: 'Написать в Telegram',
+    ctaBtn2: 'Написать в WhatsApp',
+    contactsLabel: 'Контакты',
+    contactsTitle: 'Связаться с нами',
+    footerText: '© 2022–2026 INTERFIN GROUP LTDA · CNPJ 53.879.708/0001-20 · Бразилия',
+    footerOferta: 'Публичная оферта',
+    footerPrivacy: 'Политика конфиденциальности',
+  },
+  en: {
+    passportBar: '🇧🇷 Brazilian passport — <strong>Europe, UK, Japan visa-free</strong> · US visa for 10 years · With Brazilian residency — convenient Schengen & US visa applications from here',
+    whyLabel: 'Why it matters',
+    whyTitle: 'What Brazilian Residency gives you',
+    why: [
+      { icon: '🏦', title: 'Banking & Finance', text: 'International bank accounts, payment systems, crypto exchanges — all accessible with Brazilian residency.' },
+      { icon: '🛂', title: 'Schengen & US Visa', text: 'With Brazilian residency you can apply for Schengen and US visas right here in Brazil.' },
+      { icon: '🚗', title: "Driver's License", text: 'With residency you can obtain a Brazilian driver\'s license based on your existing license — no re-examination required.' },
+      { icon: '📱', title: 'YouTube, TikTok, Fanvu & more', text: 'Full monetization on international platforms — without restrictions.' },
+      { icon: '✈️', title: 'Freedom of Movement', text: 'Travel in and out without restrictions — residency does not tie you to the country.' },
+      { icon: '🏡', title: 'Citizenship for the Family', text: 'Permanent residency → citizenship application after 1 year. Children under 10 receive a passport in 6 months.' },
+    ],
+    vnjLabel: 'Residency Grounds',
+    vnjTitle: 'Find your path',
+    vnj: [
+      { tag: 'temp', tagText: 'Temporary · 1 year', title: 'Digital Nomad Visa', text: 'For freelancers, remote workers and anyone with confirmed online income. Suitable for the whole family. Renewed annually.', path: '' },
+      { tag: 'temp', tagText: 'Temporary · 1 year', title: 'Study (adults & children)', text: 'Based on enrollment at a school, kindergarten, language course or university — for the whole family. We assist with enrollment and documents.', path: 'renewed for the duration of study' },
+      { tag: 'perm', tagText: 'Permanent Residency', title: 'Birth of a Child', text: 'A child born in Brazil automatically becomes a citizen. Parents receive permanent residency and may apply for citizenship after one year. Delivery at private or public hospital — free under SUS.', path: 'citizenship for parents after 1 year' },
+      { tag: 'perm', tagText: 'Permanent Residency', title: 'Marriage to a Brazilian', text: 'Official marriage or "stable union" (união estável) grants immediate permanent residency. Citizenship application after one year.', path: 'citizenship after 1 year' },
+      { tag: 'temp', tagText: 'Temporary · 1 year', title: 'Political Asylum', text: 'Brazil has a welcoming approach to asylum — no proof or lawyers required at the time of filing. Residency is issued for 1 year with renewal rights. Travel in and out with notice to the authority.', path: 'citizenship after 5–10 years' },
+      { tag: 'temp', tagText: 'Temporary · 4 years → Permanent', title: 'Investment', text: 'Purchase of real estate from R$1M or business investment from R$500K. Covers all family members. Includes the right to work and operate a business in Brazil.', path: 'citizenship after 8 years' },
+      { tag: 'perm', tagText: 'Permanent Residency', title: 'Argentine Child', text: 'Residency based on the MERCOSUL agreement if your child holds Argentine citizenship. Children under 10 receive Brazilian citizenship in 6 months; parents may apply for a passport after 4 years.', path: 'citizenship for children in 6 months · parents after 4 years' },
+    ],
+    pricesLabel: 'Transparent Pricing',
+    pricesTitle: 'Service Packages',
+    pricesOferta: 'Services are provided under the',
+    pricesOfertaLink: 'public offer agreement',
+    modalBtnText: 'What\'s included →',
+    modalServicesLabel: 'What\'s included',
+    modalDocsLabel: 'Required documents',
+    modalCtaText: 'Message us on Telegram',
+    extrasTitle: 'Additional Services',
+    extras: [
+      { name: 'Tourist visa extension in Rio', price: '$200' },
+      { name: 'Residency card / SIN collection by proxy', price: '$200' },
+      { name: 'Government office accompaniment', price: '$200' },
+      { name: 'CPF update online', price: '$100' },
+      { name: 'Russian consulate appointment in Rio / Brasília', price: '$50' },
+      { name: 'Introductory consultation', price: '$50' },
+    ],
+    mainCta: 'Get a quote for your situation',
+    birthsBannerLabel: 'Separate service',
+    birthsBannerTitle: 'Birth Accompaniment in Brazil',
+    birthsBannerText: 'Birth preparation, hospital selection, certified doula accompaniment in Rio de Janeiro and Brasília.',
+    birthsBannerBtn: 'Learn more →',
+    processLabel: 'How we work',
+    processTitle: 'Full transparency at every step',
+    process: [
+      { n: '01', title: 'Initial contact', text: 'Message us on Telegram or WhatsApp. We discuss your situation and identify the best residency ground.' },
+      { n: '02', title: 'Document collection — online', text: 'We work from scanned copies. We translate documents, complete forms and pay fees — all before you arrive. Originals stay with you.' },
+      { n: '03', title: 'Filing & accompaniment', text: 'We schedule your police or consulate appointment. If filing in Brazil, our translator accompanies you. The entire process is visible in your private chat.' },
+      { n: '04', title: 'Result', text: 'We track your case status and update you at every step. Average time from filing to receiving the residency card: 1.5 months.' },
+    ],
+    reviewsLabel: 'What clients say',
+    reviewsTitle: 'Reviews',
+    teamLabel: 'Team',
+    teamTitle: 'Svoi_Brazil — who we are',
+    teamSub: 'We are a team of professionals. Document filing available in any state of Brazil.',
+    teamFooter: 'We work with citizens of any country — individuals and legal entities. We speak Russian, English, Portuguese and French.',
+    faqLabel: 'Frequently Asked Questions',
+    faq: [
+      { q: 'How long does the residency process take?', a: 'From document submission to receiving the residency card — approximately 1.5 months on average.' },
+      { q: 'Do I need to be in Brazil to apply?', a: 'Residency applications are filed from within Brazil. The only exception is the Nomad Visa — it can be initiated from a Brazilian consulate in your home country.' },
+      { q: 'What documents are required?', a: 'The core set includes: birth certificate with apostille, criminal record clearance with apostille, and marriage certificate with apostille (if applicable). The exact list depends on your grounds — we will clarify during the consultation.' },
+      { q: 'Can I apply if I don\'t have all documents yet?', a: 'Yes. Missing documents can be requested through the Russian consulate in Brazil — we will help you with that process.' },
+      { q: 'How much does it cost to live in Brazil?', a: 'For a family of 3–4, around $3,000 per month. It depends on the city: Rio is more expensive, while other states are noticeably more affordable.' },
+      { q: 'If I apply for asylum, do I need to stay in Brazil?', a: 'No, your movements are not restricted and your documents remain with you. However, if you wish to maintain your status, you must notify the relevant authority before travelling.' },
+      { q: 'Can older children get citizenship if the younger one was born in Brazil?', a: 'Yes. Children under 10 follow a simplified path. Older children apply through the standard residency route.' },
+      { q: 'How much do births cost in Brazil?', a: 'At a public hospital — free with SUS coverage. At a private clinic — typically $3,000 to $10,000 depending on the facility.' },
+      { q: 'Do I need to speak Portuguese?', a: 'Not for the residency application. Portuguese proficiency is required for citizenship. We provide a translator at all in-person government interactions.' },
+      { q: 'Can I apply for a Schengen visa from Brazil?', a: 'Yes, with residency. Brazil is a convenient base for Schengen and US visa applications.' },
+    ],
+    ctaTitle: 'Ready to start?',
+    ctaSub: 'Contact us — we will assess your situation and find the best path. Introductory consultation — $50. Initial chat review — free.',
+    ctaBtn1: 'Message us on Telegram',
+    ctaBtn2: 'Message us on WhatsApp',
+    contactsLabel: 'Contacts',
+    contactsTitle: 'Get in touch',
+    footerText: '© 2022–2026 INTERFIN GROUP LTDA · CNPJ 53.879.708/0001-20 · Brazil',
+    footerOferta: 'Public Offer Agreement',
+    footerPrivacy: 'Privacy Policy',
+    team1role: 'Founder', team1name: 'Ilya Magnus', team1bio: 'Founded the Svoi v Brazilii project. Runs a YouTube channel about life in Brazil.',
+    team2role: 'Immigration Specialist', team2name: 'Ekaterina Magnus', team2bio: 'Has guided over 200 residency and citizenship cases. Expert in Brazilian bureaucracy.',
+    team3role: 'Certified Doula · Rio de Janeiro', team3name: 'Olga Yankovskaya', team3bio: 'There for you at the most important moment.',
+    team4role: 'Certified Doula · Brasília', team4name: 'Aifusha Kalina', team4bio: 'There for you at the most important moment.',
+    team5role: 'Team Coordinator', team5name: 'Elena Churkina', team5bio: 'I am available at every stage of the process.',
+    contactPhone: 'Phone / WhatsApp',
+    contactLegal: 'Legal entity',
+    contactTg: 'Telegram channel',
+    contactBtnTg: 'Message us on Telegram',
+    contactBtnWa: 'Message us on WhatsApp',
+  }
+};
+
+// Package data
+const packages = {
+  ru: [
+    { id: 'birth', tag: 'perm', tagText: 'Постоянный ВНЖ', name: 'По рождению ребёнка', desc: 'Для семьи из 3 человек. Постоянный ВНЖ для всей семьи + подача на гражданство для детей до 10 лет. Стоимость переводов и пошлин включена.', price: '$1 900', modalPrice: '$1 900 · для семьи из 3 человек', services: ['Регистрация CPF','Консультация и подбор стратегии','Перевод всех документов на португальский','Оплата государственных пошлин','Заполнение анкет и форм','Запись в федеральную полицию','Сопровождение переводчиком при подаче','Оформление постоянного ВНЖ для обоих родителей и 1 ребёнка','Подача на гражданство ребёнку до 10 лет','Ведение процесса в приватном чате','Отслеживание статуса до получения карточки'], docs: ['Паспорт каждого члена семьи','Свидетельство о рождении ребёнка (бразильское)','Свидетельства о рождении родителей с апостилем и старшего ребёнка','Справка об отсутствии судимости с апостилем','Свидетельство о браке с апостилем (если есть)'], note: 'Часть документов можно оформить через консульство вашей страны в Бразилии', tgText: 'Здравствуйте! Интересует пакет «По рождению ребёнка». Хочу узнать подробнее.' },
+    { id: 'study', tag: 'temp', tagText: 'Временный ВНЖ · 1 год', name: 'Студенческий', desc: 'Для семьи из 3 человек. Временный ВНЖ на 1 год с правом продления на основании учёбы. Стоимость переводов и пошлин включена.', price: '$1 900', modalPrice: '$1 900 · для семьи из 3 человек', services: ['Регистрация CPF','Консультация и подбор учебного заведения','Помощь с поступлением и документами учреждения','Перевод всех документов на португальский','Оплата государственных пошлин','Заполнение анкет и форм','Запись в федеральную полицию','Сопровождение переводчиком при подаче','ВНЖ для всей семьи (3 человека)','Ведение процесса в приватном чате','Отслеживание статуса до получения карточки'], docs: ['Паспорт каждого члена семьи','Свидетельства о рождении с апостилем','Справка об отсутствии судимости с апостилем','Свидетельство о браке с апостилем (если есть)','Подтверждение зачисления в учебное заведение'], note: 'Часть документов можно оформить через консульство вашей страны в Бразилии', tgText: 'Здравствуйте! Интересует пакет «Студенческий». Хочу узнать подробнее.' },
+    { id: 'nomad', tag: 'temp', tagText: 'Временный ВНЖ · 1 год', name: 'Цифровой кочевник', desc: 'Для 1 человека. Временный ВНЖ на 1 год. Для людей с доходом онлайн.', price: '$1 200', modalPrice: '$1 200 · для 1 человека', services: ['Регистрация CPF','Консультация и подбор стратегии','Перевод всех документов на португальский','Оплата государственных пошлин','Заполнение анкет и форм','Запись в федеральную полицию','Сопровождение переводчиком при подаче','Ведение процесса в приватном чате','Отслеживание статуса до получения карточки'], docs: ['Паспорт','Свидетельство о рождении с апостилем','Справка об отсутствии судимости с апостилем','Подтверждение дохода (договор, выписка, справка)','Выписка из банка'], note: 'Часть документов можно оформить через консульство вашей страны в Бразилии', tgText: 'Здравствуйте! Интересует пакет «Цифровой кочевник». Хочу узнать подробнее.' },
+    { id: 'marriage', tag: 'perm', tagText: 'Постоянный ВНЖ', name: 'По браку / союзу', desc: 'Для 2 человек. Постоянный ВНЖ. Через год — подача на гражданство. Дети до 10 лет — упрощённое гражданство. Переводы и пошлины включены.', price: '$1 200', modalPrice: '$1 200 · для 2 человек', services: ['Регистрация CPF','Консультация и подбор стратегии','Перевод всех документов на португальский','Оплата государственных пошлин','Заполнение анкет и форм','Запись в федеральную полицию','Сопровождение переводчиком при подаче','Постоянный ВНЖ для супруга/и-иностранца и ребёнка','Ведение процесса в приватном чате','Отслеживание статуса до получения карточки'], docs: ['Паспорт каждого супруга','Свидетельство о браке или документ об устойчивом союзе с гражданином Бразилии','Свидетельство о рождении с апостилем','Справка об отсутствии судимости с апостилем','Документы супруга/и-гражданина Бразилии (CPF, RG/CIN)'], note: 'Часть документов можно оформить через консульство вашей страны в Бразилии', tgText: 'Здравствуйте! Интересует пакет «По браку / союзу». Хочу узнать подробнее.' },
+    { id: 'asylum', tag: 'temp', tagText: 'Временный ВНЖ · 1 год', name: 'Политическое убежище', desc: 'Для 1 человека. Временный ВНЖ на 1 год с правом продления и последующего гражданства.', price: '$800', modalPrice: '$800 · для 1 человека', services: ['Регистрация CPF','Консультация и подбор стратегии','Перевод всех документов на португальский','Оплата государственных пошлин','Заполнение анкет и форм','Подача анкеты (вашего кейса) с ваших слов','Сопровождение переводчиком при подаче','Ведение процесса в приватном чате','Отслеживание статуса до получения карточки'], docs: ['Паспорт либо любой документ, удостоверяющий личность','Свидетельство о рождении (при наличии)','Доказательства не требуются'], note: 'Часть документов можно оформить через консульство вашей страны в Бразилии', tgText: 'Здравствуйте! Интересует пакет «Политическое убежище». Хочу узнать подробнее.' },
+    { id: 'argentina', tag: 'perm', tagText: 'Постоянный ВНЖ', name: 'Ребёнок-аргентинец', desc: 'Для семьи из 4 человек. Постоянный ВНЖ для всей семьи. Подача на гражданство детям до 10 лет. Переводы и пошлины включены в стоимость.', price: '$3 900', modalPrice: '$3 900 · для семьи из 4 человек', services: ['Регистрация CPF','Консультация и подбор стратегии','Перевод всех документов на португальский','Оплата государственных пошлин','Заполнение анкет и форм (MERCOSUL)','Запись в федеральную полицию','Сопровождение переводчиком при подаче','Постоянный ВНЖ для всей семьи','Подача на гражданство детям до 10 лет','Ведение процесса в приватном чате','Отслеживание статуса до получения карточки'], docs: ['Паспорт каждого члена семьи','Аргентинский паспорт / DNI ребёнка','Свидетельства о рождении с апостилем','Справка об отсутствии судимости с апостилем','Свидетельство о браке с апостилем (если есть)'], note: 'Часть документов можно оформить через консульство вашей страны в Бразилии', tgText: 'Здравствуйте! Интересует пакет «Ребёнок-аргентинец». Хочу узнать подробнее.' },
+    { id: 'invest', tag: 'temp', tagText: 'Временный ВНЖ · 4 года → Постоянный ВНЖ', name: 'Инвестиции / бизнес', desc: 'ВНЖ на 4 года с правом перехода на постоянный ВНЖ. Гражданство через 8 лет. Для семьи из 4 человек. Стоимость переводов и пошлин включена.', price: '$4 900', modalPrice: '$4 900 · для семьи из 4 человек', services: ['Регистрация CPF','Консультация по структуре инвестиций','Перевод всех документов на португальский','Оплата государственных пошлин','Заполнение анкет и форм','Запись в федеральную полицию','Сопровождение переводчиком при подаче','ВНЖ на 4 года для всей семьи с правом обмена на постоянный ВНЖ','Ведение процесса в приватном чате','Отслеживание статуса до получения карточки'], docs: ['Паспорт каждого члена семьи','Свидетельства о рождении с апостилем','Справка об отсутствии судимости с апостилем','Свидетельство о браке с апостилем (если есть)','Документы, подтверждающие инвестиции или владение бизнесом','Выписки с банковских счетов'], note: 'Часть документов можно оформить через консульство вашей страны в Бразилии', tgText: 'Здравствуйте! Интересует пакет «Инвестиции / бизнес». Хочу узнать подробнее.' },
+  ],
+  en: [
+    { id: 'birth', tag: 'perm', tagText: 'Permanent Residency', name: 'Birth of a Child', desc: 'For a family of 3. Permanent residency for the whole family + citizenship application for children under 10. Translation and state fees included.', price: '$1,900', modalPrice: '$1,900 · family of 3', services: ['CPF registration','Consultation and strategy selection','Translation of all documents into Portuguese','Payment of state fees','Completion of forms and applications','Police appointment booking','Translator accompaniment at filing','Permanent residency for both parents and 1 child','Citizenship filing for child under 10','Case management in a private chat','Status tracking until residency card is received'], docs: ['Passport of each family member','Brazilian birth certificate of the child','Birth certificates of parents with apostille and of the older child','Criminal record clearance with apostille','Marriage certificate with apostille (if applicable)'], note: 'Some documents can be arranged through your country\'s consulate in Brazil', tgText: 'Hello! I am interested in the Birth of a Child package. I would like to learn more.' },
+    { id: 'study', tag: 'temp', tagText: 'Temporary · 1 year', name: 'Student Package', desc: 'For a family of 3. Temporary residency for 1 year with renewal based on enrollment. Translation and state fees included.', price: '$1,900', modalPrice: '$1,900 · family of 3', services: ['CPF registration','Consultation and school / institution selection','Enrollment assistance and institutional documents','Translation of all documents into Portuguese','Payment of state fees','Completion of forms and applications','Police appointment booking','Translator accompaniment at filing','Residency for the whole family (3 people)','Case management in a private chat','Status tracking until residency card is received'], docs: ['Passport of each family member','Birth certificates with apostille','Criminal record clearance with apostille','Marriage certificate with apostille (if applicable)','Proof of enrollment'], note: 'Some documents can be arranged through your country\'s consulate in Brazil', tgText: 'Hello! I am interested in the Student Package. I would like to learn more.' },
+    { id: 'nomad', tag: 'temp', tagText: 'Temporary · 1 year', name: 'Digital Nomad', desc: 'For 1 person. Temporary residency for 1 year. For people with online income.', price: '$1,200', modalPrice: '$1,200 · 1 person', services: ['CPF registration','Consultation and strategy selection','Translation of all documents into Portuguese','Payment of state fees','Completion of forms and applications','Police appointment booking','Translator accompaniment at filing','Case management in a private chat','Status tracking until residency card is received'], docs: ['Passport','Birth certificate with apostille','Criminal record clearance with apostille','Proof of income (contract, bank statement, letter)','Bank statement'], note: 'Some documents can be arranged through your country\'s consulate in Brazil', tgText: 'Hello! I am interested in the Digital Nomad package. I would like to learn more.' },
+    { id: 'marriage', tag: 'perm', tagText: 'Permanent Residency', name: 'Marriage / Stable Union', desc: 'For 2 people. Permanent residency. Citizenship application after 1 year. Children under 10 — simplified citizenship. Translations and fees included.', price: '$1,200', modalPrice: '$1,200 · 2 people', services: ['CPF registration','Consultation and strategy selection','Translation of all documents into Portuguese','Payment of state fees','Completion of forms and applications','Police appointment booking','Translator accompaniment at filing','Permanent residency for the foreign spouse and child','Case management in a private chat','Status tracking until residency card is received'], docs: ['Passport of each spouse','Marriage certificate or stable union document with a Brazilian citizen','Birth certificate with apostille','Criminal record clearance with apostille','Brazilian spouse\'s documents (CPF, RG/CIN)'], note: 'Some documents can be arranged through your country\'s consulate in Brazil', tgText: 'Hello! I am interested in the Marriage / Stable Union package. I would like to learn more.' },
+    { id: 'asylum', tag: 'temp', tagText: 'Temporary · 1 year', name: 'Political Asylum', desc: 'For 1 person. Temporary residency for 1 year with renewal rights and a path to citizenship.', price: '$800', modalPrice: '$800 · 1 person', services: ['CPF registration','Consultation and strategy selection','Translation of all documents into Portuguese','Payment of state fees','Completion of forms and applications','Case filing based on your personal account','Translator accompaniment at filing','Case management in a private chat','Status tracking until residency card is received'], docs: ['Passport or any identity document','Birth certificate (if available)','No proof of persecution required'], note: 'Some documents can be arranged through your country\'s consulate in Brazil', tgText: 'Hello! I am interested in the Political Asylum package. I would like to learn more.' },
+    { id: 'argentina', tag: 'perm', tagText: 'Permanent Residency', name: 'Argentine Child', desc: 'For a family of 4. Permanent residency for the whole family. Citizenship application for children under 10. Translations and fees included.', price: '$3,900', modalPrice: '$3,900 · family of 4', services: ['CPF registration','Consultation and strategy selection','Translation of all documents into Portuguese','Payment of state fees','Completion of MERCOSUL forms','Police appointment booking','Translator accompaniment at filing','Permanent residency for the whole family','Citizenship filing for children under 10','Case management in a private chat','Status tracking until residency card is received'], docs: ['Passport of each family member','Argentine passport / DNI of the child','Birth certificates with apostille','Criminal record clearance with apostille','Marriage certificate with apostille (if applicable)'], note: 'Some documents can be arranged through your country\'s consulate in Brazil', tgText: 'Hello! I am interested in the Argentine Child package. I would like to learn more.' },
+    { id: 'invest', tag: 'temp', tagText: 'Temporary 4 years → Permanent', name: 'Investment / Business', desc: 'Residency for 4 years with transition to permanent. Citizenship after 8 years. For a family of 4. Translation and state fees included.', price: '$4,900', modalPrice: '$4,900 · family of 4', services: ['CPF registration','Investment structure consultation','Translation of all documents into Portuguese','Payment of state fees','Completion of forms and applications','Police appointment booking','Translator accompaniment at filing','4-year residency for the whole family with right to transition to permanent residency','Case management in a private chat','Status tracking until residency card is received'], docs: ['Passport of each family member','Birth certificates with apostille','Criminal record clearance with apostille','Marriage certificate with apostille (if applicable)','Documents confirming investment or business ownership','Bank account statements'], note: 'Some documents can be arranged through your country\'s consulate in Brazil', tgText: 'Hello! I am interested in the Investment / Business package. I would like to learn more.' },
+  ]
+};
+
+let currentLang = 'ru';
+
+function detectLang() {
+  const browserLang = (navigator.language || navigator.userLanguage || 'ru').toLowerCase();
+  return browserLang.startsWith('ru') ? 'ru' : 'en';
+}
+
+function toggleLang() {
+  currentLang = currentLang === 'ru' ? 'en' : 'ru';
+  document.getElementById('langBtn').textContent = currentLang === 'ru' ? 'EN' : 'RU';
+  document.documentElement.lang = currentLang;
+  localStorage.setItem('svoibrazil_lang', currentLang);
+  applyTranslations();
+}
+
+// Init on load
+window.addEventListener('DOMContentLoaded', function() {
+  const saved = localStorage.getItem('svoibrazil_lang');
+  currentLang = saved || detectLang();
+  document.getElementById('langBtn').textContent = currentLang === 'ru' ? 'EN' : 'RU';
+  document.documentElement.lang = currentLang;
+  applyTranslations();
+});
+
+function applyTranslations() {
+  const t = translations[currentLang];
+  const s = sectionTranslations[currentLang];
+  const pkgs = packages[currentLang];
+
+  // Simple data-i18n elements
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (t[key] !== undefined) el.innerHTML = t[key];
+  });
+
+  // Passport bar
+  document.querySelector('.passport-bar').innerHTML = s.passportBar;
+
+  // Why section
+  document.querySelector('#why .section-label').textContent = s.whyLabel;
+  document.querySelector('#why .section-title').textContent = s.whyTitle;
+  const whyCards = document.querySelectorAll('.why-card');
+  s.why.forEach((w, i) => {
+    if (whyCards[i]) {
+      whyCards[i].querySelector('h3').textContent = w.title;
+      whyCards[i].querySelector('p').textContent = w.text;
+    }
+  });
+
+  // VNJ section
+  document.querySelector('#vnj .section-label').textContent = s.vnjLabel;
+  document.querySelector('#vnj .section-title').textContent = s.vnjTitle;
+  const vnjCards = document.querySelectorAll('.vnj-card');
+  s.vnj.forEach((v, i) => {
+    if (vnjCards[i]) {
+      const tag = vnjCards[i].querySelector('.vnj-card-tag');
+      tag.textContent = v.tagText;
+      tag.className = `vnj-card-tag tag-${v.tag}`;
+      vnjCards[i].querySelector('h3').textContent = v.title;
+      vnjCards[i].querySelector('p').textContent = v.text;
+      const path = vnjCards[i].querySelector('.vnj-card-path');
+      if (path) path.textContent = v.path;
+    }
+  });
+
+  // Prices section
+  document.querySelector('#prices .section-label').textContent = s.pricesLabel;
+  document.querySelector('#prices .section-title').textContent = s.pricesTitle;
+  document.querySelector('#prices .section-sub').innerHTML =
+    `${s.pricesOferta} <a href="${currentLang === 'en' ? '/oferta-en.pdf' : '/oferta.pdf'}" target="_blank" class="oferta-link">${s.pricesOfertaLink}</a>.`;
+
+  // Rebuild price cards
+  const grid = document.querySelector('.prices-grid');
+  grid.innerHTML = pkgs.map(p => `
+    <div class="price-card">
+      <div class="price-card-name">${p.name}</div>
+      <div class="price-card-desc">${p.desc}</div>
+      <div class="price-card-amount">${p.price} <span>${currentLang === 'ru' ? 'за пакет' : 'per package'}</span></div>
+      <button class="modal-btn" onclick="openModal('modal-${p.id}')">${s.modalBtnText}</button>
+    </div>`).join('');
+
+  // Rebuild extras
+  document.querySelector('.extras-title').textContent = s.extrasTitle;
+  const extrasList = document.querySelector('.extras-list');
+  extrasList.innerHTML = s.extras.map(e =>
+    `<li>${e.name} <span class="price">${e.price}</span></li>`).join('');
+
+  // Main CTA button
+  document.querySelector('.prices-section [href="https://t.me/rio_das_magnus"].btn-accent').textContent = s.mainCta;
+
+  // Births banner
+  document.querySelector('.births-banner-label').textContent = s.birthsBannerLabel;
+  document.querySelector('.births-banner-text strong').textContent = s.birthsBannerTitle;
+  document.querySelector('.births-banner-text p').textContent = s.birthsBannerText;
+  document.querySelector('.btn-births').textContent = s.birthsBannerBtn;
+
+  // Process section
+  document.querySelector('#process .section-label').textContent = s.processLabel;
+  document.querySelector('#process .section-title').textContent = s.processTitle;
+  const steps = document.querySelectorAll('.process-step');
+  s.process.forEach((p, i) => {
+    if (steps[i]) {
+      steps[i].querySelector('h3').textContent = p.title;
+      steps[i].querySelector('p').textContent = p.text;
+    }
+  });
+
+  // Reviews section
+  document.querySelector('#reviews .section-label').textContent = s.reviewsLabel;
+  document.querySelector('#reviews .section-title').textContent = s.reviewsTitle;
+  if (currentLang === 'en') {
+    const reviewsGrid = document.querySelector('.reviews-grid');
+    reviewsGrid.innerHTML = `
+      <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">A great stroke of luck to have such support in Brazil. Helped us resolve very serious issues many times. Attentive, punctual, competent and friendly. Highly recommend!</p><div class="review-author">Ishvara das</div></div>
+      <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">I contacted them for help with the Nomad visa. The best experience! Katya is always available, knows everything, handled all the local bureaucracy. Highly recommend.</p><div class="review-author">Sklise</div></div>
+      <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">The team is always in touch, resolves everything quickly. We reached out about documents, money transfers and even everyday questions. Always reliable, always helpful.</p><div class="review-author">Asya Isaeva</div></div>
+      <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">I used the full accompaniment service — loved everything. Warm, attentive team. I would never have managed so quickly on my own with everything needed to settle in Brazil.</p><div class="review-author">Nick Levankov</div></div>
+      <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">Highly recommend! All processes went smoothly, no unnecessary complications. Very responsive.</p><div class="review-author">Alexander Isaev</div></div>`;
+  } else {
+    const reviewsGrid = document.querySelector('.reviews-grid');
+    reviewsGrid.innerHTML = `
+      <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">Большая удача иметь такую поддержку в Бразилии. Много раз помогли решить очень серьёзные вопросы. Внимание, пунктуальность, компетентность и доброжелательность. Рекомендую!</p><div class="review-author">Ishvara das</div></div>
+      <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">Обращалась за помощью в оформлении Nomad визы. Самые лучшие впечатления! Катя всегда на связи, всё знает, все особенности местной бюрократии победила. Очень рекомендую.</p><div class="review-author">Sklise</div></div>
+      <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">Ребята всегда на связи, быстро и оперативно всё решают. Обращались и по вопросам документов, и по вопросам перевода денег и даже по мелким бытовым. Всё чётко, всегда сделают и подскажут.</p><div class="review-author">Ася Исаева</div></div>
+      <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">Брал полное сопровождение — всё понравилось. Тёплое отношение, я сам бы не разобрался и тем более не справился бы так быстро со всем, что нужно для ассимиляции в Бразилии.</p><div class="review-author">Nick Levankov</div></div>
+      <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">Рекомендую! Все процессы прошли успешно, без лишних вопросов. Очень отзывчивые.</p><div class="review-author">Александр Исаев</div></div>`;
+  }
+
+  // Team section
+  document.querySelector('#team .section-label').textContent = s.teamLabel;
+  document.querySelector('#team .section-title').textContent = s.teamTitle;
+  document.querySelector('#team .section-sub').textContent = s.teamSub;
+  document.querySelector('#team p[style]').textContent = s.teamFooter;
+
+  const teamMembers = [
+    { role: 't1role', name: 't1name', bio: 't1bio', rk: 'team1role', nk: 'team1name', bk: 'team1bio' },
+    { role: 't2role', name: 't2name', bio: 't2bio', rk: 'team2role', nk: 'team2name', bk: 'team2bio' },
+    { role: 't3role', name: 't3name', bio: 't3bio', rk: 'team3role', nk: 'team3name', bk: 'team3bio' },
+    { role: 't4role', name: 't4name', bio: 't4bio', rk: 'team4role', nk: 'team4name', bk: 'team4bio' },
+    { role: 't5role', name: 't5name', bio: 't5bio', rk: 'team5role', nk: 'team5name', bk: 'team5bio' },
+  ];
+  teamMembers.forEach(m => {
+    const role = document.getElementById(m.role);
+    const name = document.getElementById(m.name);
+    const bio  = document.getElementById(m.bio);
+    if (role && t[m.rk]) role.textContent = t[m.rk];
+    if (name && t[m.nk]) name.textContent = t[m.nk];
+    if (bio  && t[m.bk]) bio.textContent  = t[m.bk];
+  });
+
+  // Contacts section — handled by data-i18n loop above + explicit backup
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (t[key] !== undefined) el.innerHTML = t[key];
+  });
+  // Explicit backup for buttons
+  const tgBtn = document.querySelector('.btn-tg');
+  const waBtn = document.querySelector('.btn-wa');
+  if (tgBtn) tgBtn.textContent = t['contactBtnTg'];
+  if (waBtn) waBtn.textContent = t['contactBtnWa'];
+
+  // FAQ
+  document.querySelector('#faq .section-label').textContent = s.faqLabel;
+  const faqList = document.querySelector('.faq-list');
+  faqList.innerHTML = s.faq.map(f => `
+    <details>
+      <summary>${f.q}</summary>
+      <div class="faq-answer">${f.a}</div>
+    </details>`).join('');
+
+  // CTA section
+  document.querySelector('.cta-section .section-title').textContent = s.ctaTitle;
+  document.querySelector('.cta-section .cta-sub').textContent = s.ctaSub;
+  const ctaBtns = document.querySelectorAll('.cta-actions a');
+  if (ctaBtns[0]) ctaBtns[0].textContent = s.ctaBtn1;
+  if (ctaBtns[1]) ctaBtns[1].textContent = s.ctaBtn2;
+
+  // Contacts
+  document.querySelector('.contacts-section .section-label').textContent = s.contactsLabel;
+  document.querySelector('.contacts-section .section-title').textContent = s.contactsTitle;
+
+  // Footer
+  const footerDiv = document.querySelector('footer div');
+  footerDiv.innerHTML = `${s.footerText}<br>
+    <a href="${currentLang === 'en' ? '/oferta-en.pdf' : '/oferta.pdf'}" target="_blank">${s.footerOferta}</a> · <a href="${currentLang === 'en' ? '/privacy-en.pdf' : '/privacy.pdf'}" target="_blank">${s.footerPrivacy}</a>`;
+
+  // Meta description and title
+  if (currentLang === 'en') {
+    document.title = 'Svoi_Brazil — Brazilian Residency & Citizenship';
+    document.querySelector('meta[name="description"]').setAttribute('content',
+      'Brazilian residency and citizenship — handled for you. Online process, 1–2 months. 200+ cases since 2022. Rio de Janeiro & Brasília.');
+  } else {
+    document.title = 'Свои в Бразилии — ВНЖ и гражданство под ключ';
+    document.querySelector('meta[name="description"]').setAttribute('content',
+      'ВНЖ и гражданство Бразилии под ключ — для русскоязычных семей. Оформление за 1–2 месяца. 200+ кейсов с 2022 года.');
+  }
+
+  // Update static oferta and privacy links
+  const ofertaUrl = currentLang === 'en' ? '/oferta-en.pdf' : '/oferta.pdf';
+  const privacyUrl = currentLang === 'en' ? '/privacy-en.pdf' : '/privacy.pdf';
+  const ofertaPrices = document.getElementById('oferta-link-prices');
+  const ofertaFooter = document.getElementById('oferta-link-footer');
+  const privacyFooter = document.getElementById('privacy-link-footer');
+  if (ofertaPrices) ofertaPrices.href = ofertaUrl;
+  if (ofertaFooter) ofertaFooter.href = ofertaUrl;
+  if (privacyFooter) privacyFooter.href = privacyUrl;
+
+  // Rebuild modals with current language
+  rebuildModals(pkgs, s);
+}
+
+function rebuildModals(pkgs, s) {
+  pkgs.forEach(p => {
+    const modal = document.getElementById(`modal-${p.id}`);
+    if (!modal) return;
+    const tag = modal.querySelector('.modal-tag');
+    tag.textContent = p.tagText;
+    tag.className = `modal-tag tag-${p.tag}`;
+    modal.querySelector('.modal-title').textContent = p.name;
+    modal.querySelector('.modal-price').textContent = p.modalPrice;
+    const labels = modal.querySelectorAll('.modal-section-label');
+    if (labels[0]) labels[0].textContent = s.modalServicesLabel;
+    if (labels[1]) labels[1].textContent = s.modalDocsLabel;
+    const lists = modal.querySelectorAll('.modal-list');
+    if (lists[0]) lists[0].innerHTML = p.services.map(sv => `<li>${sv}</li>`).join('');
+    if (lists[1]) lists[1].innerHTML =
+      p.docs.map(d => `<li>${d}</li>`).join('') +
+      `<li class="modal-list-note">${p.note}</li>`;
+    const cta = modal.querySelector('.modal-cta');
+    if (cta) {
+      cta.textContent = s.modalCtaText;
+      const tgEncoded = encodeURIComponent(p.tgText);
+      cta.href = `https://t.me/rio_das_magnus?text=${tgEncoded}`;
+    }
+  });
+}
+</script>
+
+<script>
+function openModal(id) {
+  document.getElementById(id).classList.add('modal-open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal(e, id) {
+  if (e.target === e.currentTarget) {
+    document.getElementById(id).classList.remove('modal-open');
+    document.body.style.overflow = '';
+  }
+}
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    document.querySelectorAll('.modal-overlay.modal-open').forEach(function(m) {
+      m.classList.remove('modal-open');
+    });
+    document.body.style.overflow = '';
+  }
+});
+</script>
+
+</body>
+</html>
